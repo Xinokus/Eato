@@ -1,0 +1,69 @@
+@import '../Necessities/fonts.scss';
+.header{
+    width: 1440px;
+    height: 1024px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #C31E26;
+    flex-direction: column;
+    padding-bottom: 78px;
+    overflow: hidden;
+    position: relative;
+    .circle_one{
+        position: absolute;
+        transform: translate(605px, -95px);
+        z-index: 0;
+        pointer-events: none;
+    }
+    .circle_two{
+        position: absolute;
+        transform: translate(-605px, 656px);
+        z-index: 0;
+        pointer-events: none;
+    }
+    .highlight{
+        position: absolute;
+        transform: translate(-405px, -235px);
+        z-index: 0;
+        filter: blur(576px);
+        pointer-events: none;
+    }
+    .header_mid{
+        img{
+            width: 650px;
+            height: 565px;
+            background-color: gainsboro;
+        }
+    }
+    .header_bot{
+        width: 659px;
+        height: 171px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        .title{
+            @include H2Semibold;
+            color: white;
+        }
+        .desc{
+            @include BodyLargeMedium;
+            color: white;
+            text-align: center;
+        }
+        .button{
+            button{
+                width: 135px;
+                height: 36px;
+                background-color: #FFC62B;
+                border-radius: 8px;
+                color: #C31E26;
+                border: none;
+                @include BodyMediumMedium;
+                cursor: pointer;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,45 @@
+@import '../../Necessities/fonts.scss';
+*{
+    margin: 0;
+    padding: 0;
+}
+    .nav{
+        width: 1280px;
+        height: 36px;
+        margin-top: 45px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;
+        .nav_left{
+            width: 504px;
+            height: 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .links{
+                width: 298px;
+                height: 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                a{
+                    color: white;
+                    text-decoration: none;
+                    @include BodyMediumMedium;
+                }
+            }
+        }
+        .nav_right{
+            button{
+                width: 156px;
+                height: 36px;
+                background-color: #FFC62B;
+                border-radius: 8px;
+                color: #C31E26;
+                border: none;
+                @include BodyMediumMedium;
+                cursor: pointer;
+            }
+        }
+    }
