@@ -1,7 +1,7 @@
 @import '../../Necessities/fonts.scss';
 
 .header{
-    width: 1440px;
+    width: 100%;
     height: 742px;
     display: flex;
     align-items: center;
@@ -64,6 +64,7 @@
         background-color: white;
         transform: translate(-345px,316px);
         z-index: 1;
+        box-shadow: 0px 4px 20px 0px rgb(0, 0, 0, 0.12);
         .img{
             width: 52px;
             height: 52px;
@@ -131,6 +132,7 @@
         @include H6Medium;
         transform: translate(365px, 575px);
         z-index: 1;
+        box-shadow: 0px 4px 20px 0px rgb(0, 0, 0, 0.12);
         >div{
             width: 103px;
             display: flex;

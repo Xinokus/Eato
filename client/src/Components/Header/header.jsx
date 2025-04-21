@@ -8,13 +8,14 @@ import circle from './img/circle.png'
 import red_highlight from './img/red_highlight.png'
 import yellow_highlight from './img/yellow_highlight.png'
 
-export default function Header({title, color}){
+export default function Header({title_top, title_bot, color}){
     return(
         <>
             <header className={classes.header} style={color == 'red' ? {backgroundColor: '#C31E26'} : {backgroundColor: '#FFC62B'}}>
                 <Nav color={color}/>
                 <div className={classes.title}>
-                    <p style={color == 'yellow' ? {color: '#C31E26'} : {color: '#FFC62B'}}>{title}</p>
+                    <p style={color == 'yellow' ? {color: '#C31E26'} : {color: '#FFC62B'}}>{title_top}</p>
+                    <p style={color == 'yellow' ? {color: '#C31E26'} : {color: '#FFC62B'}}>{title_bot}</p>
                 </div>
                 <div className={classes.image}>
                     <img src="" alt="" />
