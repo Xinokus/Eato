@@ -42,9 +42,10 @@
         }
         .menu_swiper{
             width: 1280px;
-            height: 616px;
+            height: 786px;
             display: flex;
             align-items: end;
+            position: absolute;
             .swiper_slide{
                 width: 302px;
                 height: 616px;

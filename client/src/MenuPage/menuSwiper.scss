@@ -1,9 +1,28 @@
 .menu_swiper .swiper-button-prev{
-    // transform: translate(1150px, -300px);
-    top: 0;
+    transform: translate(1150px, -340px);
+    &::after{
+        rotate: 180deg;
+    }
+}
+.menu_swiper .swiper-button-next, .menu_swiper .swiper-button-prev{
     width: 48px;
     height: 48px;
+    border-radius: 48px;
+    border: 1px solid white;
+
+    &::after{
+        content: url(./img/arrow.png);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 .menu_swiper .swiper-button-next{
-    transform: translate(0px, -300px);
+    transform: translate(0px, -340px);
+}
+.menu_swiper .swiper-slide{
+    height: 616px;
+}
+.menu_swiper .swiper-wrapper{
+    height: 616px;
 }
