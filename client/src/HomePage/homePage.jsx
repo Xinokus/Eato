@@ -1,4 +1,5 @@
 import Header from '../Components/Header/header'
+import Nav from '../Components/Nav/nav'
 import classes from './homePage.module.scss'
 
 import circle from './img/circle.png'
@@ -25,7 +26,70 @@ import puzzle from './img/puzzle.png'
 export default function HomePage(){
     return(
         <>
-            <Header color={'red'} title={'Discover, Select, Enjoy – Your Perfect Choice Awaits'}/>
+            <header className={classes.header}>
+                <Nav color={'red'}/>
+                <div className={classes.con}>
+                        <div className={classes.left}>
+                            <div className={classes.text}>
+                                <div className={classes.ranking}>
+                                    <img src="" alt="" />
+                                    <p>Number 1 Restaurant in the world</p>
+                                </div>
+                                <div className={classes.main_text}>
+                                    <p>Savor the rich flavors, delight in every bite,
+                                    enjoy the experience!</p>
+                                    <p>Experience a delightful fusion of flavors, crafted with passion and served with warmth for an unforgettable dining journey</p>
+                                </div>
+                                <div className={classes.buttons}>
+                                    <button type="button">View Menu</button>
+                                    <button type="button">Explore More</button>
+                                </div>
+                            </div>
+                            <div className={classes.images}>
+                                <img src="" alt="" />
+                                <img src="" alt="" />
+                                <div className={classes.review}>
+                                    <div className={classes.rating}>
+                                        <div className={classes.stars}>
+                                            <img src="" alt="" />
+                                            <img src="" alt="" />
+                                            <img src="" alt="" />
+                                            <img src="" alt="" />
+                                            <img src="" alt="" />
+                                        </div>
+                                        <div className={classes.number}>
+                                            <p>5.0</p>
+                                        </div>
+                                    </div>
+                                    <div className={classes.comment}>
+                                        <p>I love that they offer fresh, I'm so glad I did! The food was phenomenal,healthy options without compromising on taste. The ingredients are always high-quality, and I feel great after every meal!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className={classes.right}>
+                            <div className={classes.mich}>
+                                <div className={classes.stars}>
+                                    <img src="" alt="" />
+                                    <img src="" alt="" />
+                                    <img src="" alt="" />
+                                </div>
+                                <div className={classes.line}>
+                                    <p>Michelin Star</p>
+                                </div>
+                            </div>
+                            <div className={classes.quality}>
+                                <div className={classes.img}>
+                                    <img src="" alt="" />
+                                </div>
+                                <div className={classes.bruh}>
+                                    <p>100% High Quality</p>
+                                    <p>best quality raw materials</p>
+                                </div>
+                            </div>
+                        </div>        
+                </div>
+            </header>
             <main>
                 <section className={classes.sect_one}>
                     <div className={classes.con}>
