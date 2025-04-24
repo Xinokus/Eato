@@ -22,6 +22,10 @@ import borgor from './img/borgor.png'
 import handjob from './img/handjob.png'
 import spatula from './img/spatula.png'
 import puzzle from './img/puzzle.png'
+import hat from './img/hat.png'
+import michlen from './img/michlen.png'
+import yellow_star from './img/yellow_star.png'
+import bowl from './img/bowl.png'
 
 export default function HomePage(){
     return(
@@ -32,7 +36,7 @@ export default function HomePage(){
                         <div className={classes.left}>
                             <div className={classes.text}>
                                 <div className={classes.ranking}>
-                                    <img src="" alt="" />
+                                    <img src={hat} alt="" />
                                     <p>Number 1 Restaurant in the world</p>
                                 </div>
                                 <div className={classes.main_text}>
@@ -51,11 +55,11 @@ export default function HomePage(){
                                 <div className={classes.review}>
                                     <div className={classes.rating}>
                                         <div className={classes.stars}>
-                                            <img src="" alt="" />
-                                            <img src="" alt="" />
-                                            <img src="" alt="" />
-                                            <img src="" alt="" />
-                                            <img src="" alt="" />
+                                            <img src={yellow_star} alt="" />
+                                            <img src={yellow_star} alt="" />
+                                            <img src={yellow_star} alt="" />
+                                            <img src={yellow_star} alt="" />
+                                            <img src={yellow_star} alt="" />
                                         </div>
                                         <div className={classes.number}>
                                             <p>5.0</p>
@@ -70,9 +74,9 @@ export default function HomePage(){
                         <div className={classes.right}>
                             <div className={classes.mich}>
                                 <div className={classes.stars}>
-                                    <img src="" alt="" />
-                                    <img src="" alt="" />
-                                    <img src="" alt="" />
+                                    <img src={michlen} alt="" />
+                                    <img src={michlen} alt="" />
+                                    <img src={michlen} alt="" />
                                 </div>
                                 <div className={classes.line}>
                                     <p>Michelin Star</p>
@@ -80,7 +84,7 @@ export default function HomePage(){
                             </div>
                             <div className={classes.quality}>
                                 <div className={classes.img}>
-                                    <img src="" alt="" />
+                                    <img src={bowl} alt="" />
                                 </div>
                                 <div className={classes.bruh}>
                                     <p>100% High Quality</p>

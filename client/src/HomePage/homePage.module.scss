@@ -42,6 +42,7 @@
                     border-radius: 12px;
                     @include BodyMediumMedium;
                     color: white;
+                    box-sizing: border-box;
                 }
                 .main_text{
                     width: 718px;
