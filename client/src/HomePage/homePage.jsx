@@ -1,6 +1,8 @@
 import Header from '../Components/Header/header'
 import Nav from '../Components/Nav/nav'
 import classes from './homePage.module.scss'
+import Circles from '../Components/Circles/circles'
+import './chefsSwiper.scss'
 
 import circle from './img/circle.png'
 import dish from './img/dish.png'
@@ -16,7 +18,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-import { Navigation } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 
 import borgor from './img/borgor.png'
 import handjob from './img/handjob.png'
@@ -27,10 +29,22 @@ import michlen from './img/michlen.png'
 import yellow_star from './img/yellow_star.png'
 import bowl from './img/bowl.png'
 
+import red_highlight from './img/red_highlight.png'
+import yellow_highlight from './img/yellow_highlight.png'
+
 export default function HomePage(){
     return(
         <>
             <header className={classes.header}>
+                <div className={classes.circle_one}>
+                    <img src={circle} alt="" />
+                </div>
+                <div className={classes.circle_two}>
+                    <img src={circle} alt="" />
+                </div>
+                <div className={classes.highlight}>
+                    <img src={yellow_highlight} alt="" />
+                </div>
                 <Nav color={'red'}/>
                 <div className={classes.con}>
                         <div className={classes.left}>
@@ -387,6 +401,99 @@ export default function HomePage(){
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </section>
+                <section className={classes.sect_four}>
+                    <Circles/>
+                    <div className={classes.con}>
+                        <div className={classes.text}>
+                            <p>Passionate Chefs, Dedicated Team – Crafting Culinary Excellence</p>
+                            <p>Our talented chefs and dedicated team work together to create unforgettable dining experiences with passion, precision, and creativity.</p>
+                        </div>
+                        <Swiper
+                            slidesPerView={3.7}
+                            // spaceBetween={24}
+                            className={classes.chefs_swiper + ' chefs_swiper'}
+                            _slideClass={classes.swiper_slide}
+                            modules={[Autoplay]}
+                            autoplay={{
+                                delay: 0,
+                                disableOnInteraction: false,
+                              }}
+                            speed={5000}
+                            allowTouchMove={false}
+                            loop = 'true'
+                        >
+                            <SwiperSlide>
+                                <div className={classes.swiper_slide}>
+                                    <div className={classes.image}>
+                                        <img src="" alt="" />
+                                    </div>
+                                    <div className={classes.info}>
+                                        <p>Olivia Martinez</p>
+                                        <p>Pastry Chef</p>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className={classes.swiper_slide}>
+                                    <div className={classes.image}>
+                                        <img src="" alt="" />
+                                    </div>
+                                    <div className={classes.info}>
+                                        <p>James Carter</p>
+                                        <p>Head Chef</p>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className={classes.swiper_slide}>
+                                    <div className={classes.image}>
+                                        <img src="" alt="" />
+                                    </div>
+                                    <div className={classes.info}>
+                                        <p>Daniel Wong</p>
+                                        <p>Restaurant Manager</p>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className={classes.swiper_slide}>
+                                    <div className={classes.image}>
+                                        <img src="" alt="" />
+                                    </div>
+                                    <div className={classes.info}>
+                                        <p>Olivia Martinez</p>
+                                        <p>Pastry Chef</p>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className={classes.swiper_slide}>
+                                    <div className={classes.image}>
+                                        <img src="" alt="" />
+                                    </div>
+                                    <div className={classes.info}>
+                                        <p>James Carter</p>
+                                        <p>Head Chef</p>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className={classes.swiper_slide}>
+                                    <div className={classes.image}>
+                                        <img src="" alt="" />
+                                    </div>
+                                    <div className={classes.info}>
+                                        <p>Daniel Wong</p>
+                                        <p>Restaurant Manager</p>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        </Swiper>
+                        <div className={classes.button}>
+                            <button type="button">Discover More</button>
                         </div>
                     </div>
                 </section>

@@ -1,0 +1,12 @@
+.circle_one{
+    position: absolute;
+    transform: translate(-605px, -95px);
+    z-index: 0;
+    pointer-events: none;
+}
+.circle_two{
+    position: absolute;
+    transform: translate(605px, 456px);
+    z-index: 0;
+    pointer-events: none;
+}

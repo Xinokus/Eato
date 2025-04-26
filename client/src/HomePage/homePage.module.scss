@@ -7,6 +7,25 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+    .highlight{
+        position: absolute;
+        transform: translate(-405px, -235px);
+        z-index: 0;
+        filter: blur(576px);
+        pointer-events: none;
+    }
+    .circle_one{
+        position: absolute;
+        transform: translate(605px, -95px);
+        z-index: 0;
+        pointer-events: none;
+    }
+    .circle_two{
+        position: absolute;
+        transform: translate(-605px, 576px);
+        z-index: 0;
+        pointer-events: none;
+    }
     .con{
         width: 1361px;
         height: 740px;
@@ -656,6 +675,89 @@
                         cursor: pointer;
                     }
                 }
+            }
+        }
+    }
+}
+.sect_four{
+    width: 100%;
+    height: 1024px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    background-color: #FFC62B;
+    overflow: hidden;
+    position: relative;
+    .con{
+        width: 100%;
+        height: 888px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 63px;
+        .text{
+            width: 802px;
+            height: 164px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            p:nth-of-type(1){
+                @include H2Semibold;
+            }
+            p:nth-of-type(2){
+                width: 492px;
+                @include BodyMediumRegular;
+            }
+        }
+        .chefs_swiper{
+            width: 100%;
+            height: 583px;
+            & > .swiper-wrapper{
+                transition-timing-function: linear !important;
+            }
+            .swiper_slide{
+                width: 411px;
+                height: 583px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: column;
+
+                .image{
+                    width: 411px;
+                        height: 503px;
+                    img{
+                        width: 411px;
+                        height: 503px;
+                        background-color: gainsboro;
+                    }
+                }
+                .info{
+                    width: 100%;
+                    height: 60px;
+                    text-align: center;
+                    p:nth-of-type(1){
+                        @include H5Semibold;
+                    }
+                    p:nth-of-type(2){
+                        @include BodyMediumMedium;
+                    }
+                }
+            }
+        }
+        .button{
+            button{
+                width: 137px;
+                height: 36px;
+                background-color: #C31E26;
+                border-radius: 8px;
+                border: none;
+                color: #FFC62B;
+                @include BodyMediumMedium;
+                cursor: pointer;
             }
         }
     }
