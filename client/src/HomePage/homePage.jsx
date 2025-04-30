@@ -31,8 +31,14 @@ import bowl from './img/bowl.png'
 
 import red_highlight from './img/red_highlight.png'
 import yellow_highlight from './img/yellow_highlight.png'
+import { useState } from 'react'
+
+
 
 export default function HomePage(){
+    const [sectFiveCardTitle, setSectFiveCardTitle] = useState('Elegant Anniversary Dinner')
+    const [sectFiveCardDesc, setSectFiveCardDesc] = useState('A beautifully curated private dining experience celebrating a couple’s milestone anniversary. The evening featured a gourmet five-course meal, candlelit ambiance, and live acoustic music.')
+
     return(
         <>
             <header className={classes.header}>
@@ -494,6 +500,25 @@ export default function HomePage(){
                         </Swiper>
                         <div className={classes.button}>
                             <button type="button">Discover More</button>
+                        </div>
+                    </div>
+                </section>
+                <section className={classes.sect_five}>
+                    <div className={classes.con}>
+                        <div className={classes.title}>
+                            <p>Unforgettable Moments, Beautifully Crafted, Memories That Last Forever</p>
+                        </div>
+                        <div className={classes.slider}>
+                            
+                        </div>
+                        <div className={classes.bottom}>
+                            <div className={classes.text}>
+                                <p>{sectFiveCardTitle}</p>
+                                <p>{sectFiveCardDesc}</p>
+                            </div>
+                            <div className={classes.button}>
+                                <button type="button">See More</button>
+                            </div>
                         </div>
                     </div>
                 </section>
