@@ -33,11 +33,17 @@ import red_highlight from './img/red_highlight.png'
 import yellow_highlight from './img/yellow_highlight.png'
 import { useState } from 'react'
 
+import glass from './img/glass.png'
+import SectSixTrend from './sect_six/trend'
+import SectSevenFaq from './sect_seven/faq'
 
+import Footer from '../Components/Footer/footer'
 
 export default function HomePage(){
     const [sectFiveCardTitle, setSectFiveCardTitle] = useState('Elegant Anniversary Dinner')
     const [sectFiveCardDesc, setSectFiveCardDesc] = useState('A beautifully curated private dining experience celebrating a couple’s milestone anniversary. The evening featured a gourmet five-course meal, candlelit ambiance, and live acoustic music.')
+
+    const [sectSevenFaqActive, setSectSevenFaqActive] = useState(1)
 
     return(
         <>
@@ -522,7 +528,155 @@ export default function HomePage(){
                         </div>
                     </div>
                 </section>
+                <section className={classes.sect_six}>
+                    <div className={classes.highlight}>
+                        <img src={red_highlight} alt="" />
+                    </div>
+                    <div className={classes.con}>
+                        <div className={classes.top}>
+                            <div className={classes.title}>
+                                <p>Delicious Insights, Culinary Tips, and Restaurant News</p>
+                            </div>
+                            <div className={classes.desc}>
+                                <p>Explore our blog for mouthwatering recipes, expert tips, and the latest updates from our restaurant to enhance your dining experience</p>
+                            </div>
+                            <div className={classes.search}>
+                                <img src={glass} alt="" />
+                                <input type="text" name="" id="" placeholder='What do you want to know?'/>
+                            </div>
+                        </div>
+                        <div className={classes.bot}>
+                            <div className={classes.left}>
+                                <div className={classes.image}>
+                                    <img src="" alt="" />
+                                </div>
+                                <div className={classes.info}>
+                                    <div className={classes.tags}>
+                                        <div className={classes.trend_type}>
+                                            <p>Food Trends</p>
+                                        </div>
+                                        <div className={classes.time_to_read}>
+                                            <p>6 Min Read</p>
+                                        </div>
+                                    </div>
+                                    <div className={classes.title}>
+                                        <p>The rise of plant-based dining in restaurants reflects health trends and environmental sustainability awareness among consumers</p>
+                                    </div>
+                                    <div className={classes.desc}>
+                                        <p>In recent years, there has been a significant shift towards plant-based dining, driven by health-conscious consumers and growing awareness of environmental sustainability.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={classes.right}>
+                                <SectSixTrend
+                                    title={'In recent years, there has been a significant shift towards plant-based dining.'}
+                                    desc={'In recent years, there has been a significant shift towards plant-based dining, driven by health-conscious consumers and growing awareness of environmental sustainability.'}
+                                    trend={'Food Trends'}
+                                    time={'6 Min Read'}
+                                />
+                                <SectSixTrend
+                                    title={'In recent years, there has been a significant shift towards plant-based dining.'}
+                                    desc={'In recent years, there has been a significant shift towards plant-based dining, driven by health-conscious consumers and growing awareness of environmental sustainability.'}
+                                    trend={'Food Trends'}
+                                    time={'6 Min Read'}
+                                />
+                                <SectSixTrend
+                                    title={'In recent years, there has been a significant shift towards plant-based dining.'}
+                                    desc={'In recent years, there has been a significant shift towards plant-based dining, driven by health-conscious consumers and growing awareness of environmental sustainability.'}
+                                    trend={'Food Trends'}
+                                    time={'6 Min Read'}
+                                />
+                                <SectSixTrend
+                                    title={'In recent years, there has been a significant shift towards plant-based dining.'}
+                                    desc={'In recent years, there has been a significant shift towards plant-based dining, driven by health-conscious consumers and growing awareness of environmental sustainability.'}
+                                    trend={'Food Trends'}
+                                    time={'6 Min Read'}
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className={classes.sect_seven}>
+                    <Circles/>
+                    <div className={classes.con}>
+                        <div className={classes.top}>
+                            <div className={classes.title}>
+                                <p>Your Questions Answered, Enjoy a Seamless Experience!</p>
+                            </div>
+                            <div className={classes.desc}>
+                                <p>Explore our FAQs to find answers to common inquiries, ensuring a smooth and enjoyable dining experience for all our guests</p>
+                                <button type="button">See More</button>
+                            </div>
+                        </div>
+                        <div className={classes.bot}>
+                            <div className={classes.faq}>
+                                <SectSevenFaq
+                                    title={'What are your restaurant’s hours of operation?'}
+                                    answer={'Our restaurant is open Monday to Sunday from 11:00 AM to 10:00 PM.'}
+                                    active={sectSevenFaqActive == 1 ? true : false}
+                                    onClick={   ()=>setSectSevenFaqActive(1)}
+                                />
+                                <SectSevenFaq
+                                    title={'Do I need a reservation to dine?'}
+                                    answer={'Our restaurant is open Monday to Sunday from 11:00 AM to 10:00 PM.'}
+                                    active={sectSevenFaqActive == 2 ? true : false}
+                                    onClick={()=>setSectSevenFaqActive(2)}
+                                />
+                                <SectSevenFaq
+                                    title={'Can I modify my reservation after booking?'}
+                                    answer={'Our restaurant is open Monday to Sunday from 11:00 AM to 10:00 PM.'}
+                                    active={sectSevenFaqActive == 3 ? true : false}
+                                    onClick={()=>setSectSevenFaqActive(3)}
+                                />
+                                <SectSevenFaq
+                                    title={'Do you offer takeout or delivery services?'}
+                                    answer={'Our restaurant is open Monday to Sunday from 11:00 AM to 10:00 PM.'}
+                                    active={sectSevenFaqActive == 4 ? true : false}
+                                    onClick={()=>setSectSevenFaqActive(4)}
+                                />
+                                <SectSevenFaq
+                                    title={'Are there vegetarian or gluten-free available?'}
+                                    answer={'Our restaurant is open Monday to Sunday from 11:00 AM to 10:00 PM.'}
+                                    active={sectSevenFaqActive == 5 ? true : false}
+                                    onClick={()=>setSectSevenFaqActive(5)}
+                                />
+                                <SectSevenFaq
+                                    title={'Can I host a private event at your restaurant?'}
+                                    answer={'Our restaurant is open Monday to Sunday from 11:00 AM to 10:00 PM.'}
+                                    active={sectSevenFaqActive == 6 ? true : false}
+                                    onClick={()=>setSectSevenFaqActive(6)}
+                                />
+                                <SectSevenFaq
+                                    title={'Do you accommodate requests for celebrations?'}
+                                    answer={'Our restaurant is open Monday to Sunday from 11:00 AM to 10:00 PM.'}
+                                    active={sectSevenFaqActive == 7 ? true : false}
+                                    onClick={()=>setSectSevenFaqActive(7)}
+                                />
+                            </div>
+                            <div className={classes.image}>
+                                <img src="" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className={classes.sect_eight}>
+                    <div className={classes.con}>
+                        <div className={classes.quote}>
+                            <p>“</p>
+                        </div>
+                        <div className={classes.quote}>
+                            <p>“</p>
+                        </div>
+                        <div className={classes.title}>
+                            <p>THE FOOD WAS ABSOLUTELY OUTSTANDING, AND THE SERVICE WAS EXCEPTIONAL! EVERY DETAIL CONTRIBUTED TO AN UNFORGETTABLE EVENING. CAN’T WAIT TO RETURN ANOTHER AMAZING EXPERIENCE</p>
+                        </div>
+                        <div className={classes.slider}>
+                            
+                        </div>
+                    </div>
+                </section>
             </main>
+            <Footer/>
         </>
     )
 }
