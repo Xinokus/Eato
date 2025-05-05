@@ -40,7 +40,11 @@ import glass from './img/glass.png'
 import SectSixTrend from './sect_six/trend'
 import SectSevenFaq from './sect_seven/faq'
 
+import SectEightArrow from './img/sect_eight_arrow.png'
+import SectEightSliderValues from './sect_eight/slider_values'
+
 import Footer from '../Components/Footer/footer'
+
 
 export default function HomePage(){
     const [sectFiveCardTitle, setSectFiveCardTitle] = useState('Elegant Anniversary Dinner')
@@ -53,6 +57,10 @@ export default function HomePage(){
     const [sectFiveImageThree, setSectFiveImageThree] = useState(2)
     const [sectFiveImageFour, setSectFiveImageFour] = useState(3)
     const [sectFiveImageFive, setSectFiveImageFive] = useState(4)
+
+    const [sectEightImageOne, setSectEightImageOne] = useState(0)
+    const [sectEightImageTwo, setSectEightImageTwo] = useState(1)
+    const [sectEightImageThree, setSectEightImageThree] = useState(2)
 
     function SectFiveSliderNext(){
         if(sectFiveImageOne == 4){
@@ -125,6 +133,52 @@ export default function HomePage(){
         }
         else{
             setSectFiveImageFive(sectFiveImageFive - 1)
+        }
+    }
+
+    function SectEightSliderNext(){
+        if(sectEightImageOne == 2){
+            setSectEightImageOne(0)
+        }
+        else{
+            setSectEightImageOne(sectEightImageOne + 1)
+        }
+
+        if(sectEightImageTwo == 2){
+            setSectEightImageTwo(0)
+        }
+        else{
+            setSectEightImageTwo(sectEightImageTwo + 1)
+        }
+
+        if(sectEightImageThree == 2){
+            setSectEightImageThree(0)
+        }
+        else{
+            setSectEightImageThree(sectEightImageThree + 1)
+        }
+    }
+
+    function SectEightSliderPrev(){
+        if(sectEightImageOne == 0){
+            setSectEightImageOne(2)
+        }
+        else{
+            setSectEightImageOne(sectEightImageOne - 1)
+        }
+
+        if(sectEightImageTwo == 0){
+            setSectEightImageTwo(2)
+        }
+        else{
+            setSectEightImageTwo(sectEightImageTwo - 1)
+        }
+
+        if(sectEightImageThree == 0){
+            setSectEightImageThree(2)
+        }
+        else{
+            setSectEightImageThree(sectEightImageThree - 1)
         }
     }
 
@@ -803,10 +857,45 @@ export default function HomePage(){
                             <p>“</p>
                         </div>
                         <div className={classes.title}>
-                            <p>THE FOOD WAS ABSOLUTELY OUTSTANDING, AND THE SERVICE WAS EXCEPTIONAL! EVERY DETAIL CONTRIBUTED TO AN UNFORGETTABLE EVENING. CAN’T WAIT TO RETURN ANOTHER AMAZING EXPERIENCE</p>
+                            <p>{SectEightSliderValues[sectEightImageTwo].comment}</p>
                         </div>
                         <div className={classes.slider}>
-                            
+                            <div className={classes.top}>
+                                <div className={classes.images}>
+                                    <img src="" alt="" style={{
+                                        width: SectEightSliderValues[sectEightImageOne].width,
+                                        height: SectEightSliderValues[sectEightImageOne].height,
+                                        zIndex: SectEightSliderValues[sectEightImageOne].index,
+                                        left: SectEightSliderValues[sectEightImageOne].x,
+                                        rotate: SectEightSliderValues[sectEightImageOne].rotation,
+                                    }}/>
+                                    <img src="" alt="" style={{
+                                        width: SectEightSliderValues[sectEightImageTwo].width,
+                                        height: SectEightSliderValues[sectEightImageTwo].height,
+                                        zIndex: SectEightSliderValues[sectEightImageTwo].index,
+                                        left: SectEightSliderValues[sectEightImageTwo].x,
+                                        rotate: SectEightSliderValues[sectEightImageTwo].rotation,
+                                    }}/>
+                                    <img src="" alt="" style={{
+                                        width: SectEightSliderValues[sectEightImageThree].width,
+                                        height: SectEightSliderValues[sectEightImageThree].height,
+                                        zIndex: SectEightSliderValues[sectEightImageThree].index,
+                                        left: SectEightSliderValues[sectEightImageThree].x,
+                                        rotate: SectEightSliderValues[sectEightImageThree].rotation,
+                                    }}/>
+                                </div>
+                                <div className={classes.text}>
+                                    <p>{SectEightSliderValues[sectEightImageTwo].name}</p>
+                                </div>
+                            </div>
+                            <div className={classes.directions}>
+                                <div>
+                                    <img src={SectEightArrow} alt="" onClick={SectEightSliderPrev} />
+                                </div>
+                                <div>
+                                    <img src={SectEightArrow} alt="" onClick={SectEightSliderNext} />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>

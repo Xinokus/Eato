@@ -838,6 +838,7 @@ html, body{
                     position: absolute;
                     background-color: gainsboro;
                     transition: 0.25s all ease;
+                    pointer-events: none;
                 }
                 img:nth-of-type(1){
                     background-color: white;
@@ -1264,7 +1265,7 @@ html, body{
     overflow: hidden;
     .con{
         width: 1280px;
-        height: 892px;
+        height: 775px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -1294,6 +1295,75 @@ html, body{
             color: white;
             position: relative;
             z-index: 1;
+            text-transform: uppercase;
+        }
+        .slider{
+            width: 355px;
+            height: 480px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            .top{
+                width: 355px;
+                height: 392px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+                .images{
+                    width: 355px;
+                    height: 346px;
+                    display: flex;
+                    align-items: center;
+                    position: absolute;
+                    img{
+                        position: absolute;
+                        transition: 0.25s all ease;
+                        pointer-events: none;
+                    }
+                    img:nth-of-type(1){
+                        background-color: white;
+                    }
+                    img:nth-of-type(2){
+                        background-color: #C31E26;
+                    }
+                    img:nth-of-type(3){
+                        background-color: #FFC62B;
+                    }
+                }
+                .text{
+                    @include H5Medium;
+                    color: white;
+                    width: 355px;
+                    height: 392px;
+                    display: flex;
+                    align-items: end;
+                    justify-content: center;
+                }
+            }
+            .directions{
+                width: 104px;
+                height: 48px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                div{
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 48px;
+                    border: 1px solid white;
+                    box-sizing: border-box;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                div:nth-of-type(1){
+                    rotate: 180deg;
+                }
+            }
         }
     }
 }

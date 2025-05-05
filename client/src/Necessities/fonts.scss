@@ -25,6 +25,12 @@
     line-height: 32px;
     font-weight: 600;
 }
+@mixin H5Medium{
+    font-family: Inter Tight;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+}
 @mixin H4Semibold{
     font-family: Inter Tight;
     font-size: 32px;
