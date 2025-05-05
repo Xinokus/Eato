@@ -772,6 +772,13 @@ html, body{
     justify-content: center;
     align-items: start;
     background-color: #070707;
+    .back{
+        position: absolute;
+        z-index: -1;
+        pointer-events: none;
+        filter: blur(576px);
+        opacity: 0.5;
+    }
     .con{
         width: 100%;
         height: 907px;
@@ -780,6 +787,8 @@ html, body{
         justify-content: space-between;
         align-items: center;
         flex-direction: column;
+        position: relative;
+        z-index: 1;
         .title{
             font-size: 48px;
             line-height: 56px;
@@ -789,7 +798,64 @@ html, body{
             width: 851px;
             text-align: center;
         }
-
+        .slider{
+            width: 1280px;
+            height: 487px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .buttons{
+                width: 1280px;
+                height: 48px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+                z-index: 5;
+                div{
+                    width: 48px;
+                    height: 48px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 48px;
+                    background-color: white;
+                    cursor: pointer;
+                }
+                >div:nth-of-type(1){
+                    rotate: 180deg;
+                }
+            }
+            .images{
+                width: 487px;
+                height: 487px;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                img{
+                    width: 487px;
+                    height: 487px;
+                    position: absolute;
+                    background-color: gainsboro;
+                    transition: 0.25s all ease;
+                }
+                img:nth-of-type(1){
+                    background-color: white;
+                }
+                img:nth-of-type(2){
+                    background-color: green;
+                }
+                img:nth-of-type(3){
+                    background-color: #C31E26;
+                }
+                img:nth-of-type(4){
+                    background-color: #FFC62B;
+                }
+                img:nth-of-type(5){
+                    background-color: blue;
+                }
+            }
+        }
         .bottom{
             width: 418px;
             height: 160px;

@@ -33,6 +33,9 @@ import red_highlight from './img/red_highlight.png'
 import yellow_highlight from './img/yellow_highlight.png'
 import { useState } from 'react'
 
+import SectFiveArrow from './img/sect_five_arrow.png'
+import SliderValues from './sect_five/slider_values'
+
 import glass from './img/glass.png'
 import SectSixTrend from './sect_six/trend'
 import SectSevenFaq from './sect_seven/faq'
@@ -44,6 +47,86 @@ export default function HomePage(){
     const [sectFiveCardDesc, setSectFiveCardDesc] = useState('A beautifully curated private dining experience celebrating a couple’s milestone anniversary. The evening featured a gourmet five-course meal, candlelit ambiance, and live acoustic music.')
 
     const [sectSevenFaqActive, setSectSevenFaqActive] = useState(1)
+
+    const [sectFiveImageOne, setSectFiveImageOne] = useState(0)
+    const [sectFiveImageTwo, setSectFiveImageTwo] = useState(1)
+    const [sectFiveImageThree, setSectFiveImageThree] = useState(2)
+    const [sectFiveImageFour, setSectFiveImageFour] = useState(3)
+    const [sectFiveImageFive, setSectFiveImageFive] = useState(4)
+
+    function SectFiveSliderNext(){
+        if(sectFiveImageOne == 4){
+            setSectFiveImageOne(0)
+        }
+        else{
+            setSectFiveImageOne(sectFiveImageOne + 1)
+        }
+
+        if(sectFiveImageTwo == 4){
+            setSectFiveImageTwo(0)
+        }
+        else{
+            setSectFiveImageTwo(sectFiveImageTwo + 1)
+        }
+
+        if(sectFiveImageThree == 4){
+            setSectFiveImageThree(0)
+        }
+        else{
+            setSectFiveImageThree(sectFiveImageThree + 1)
+        }
+
+        if(sectFiveImageFour == 4){
+            setSectFiveImageFour(0)
+        }
+        else{
+            setSectFiveImageFour(sectFiveImageFour + 1)
+        }
+
+        if(sectFiveImageFive == 4){
+            setSectFiveImageFive(0)
+        }
+        else{
+            setSectFiveImageFive(sectFiveImageFive + 1)
+        }
+    }
+
+    function SectFiveSliderPrev(){
+        if(sectFiveImageOne == 0){
+            setSectFiveImageOne(4)
+        }
+        else{
+            setSectFiveImageOne(sectFiveImageOne - 1)
+        }
+
+        if(sectFiveImageTwo == 0){
+            setSectFiveImageTwo(4)
+        }
+        else{
+            setSectFiveImageTwo(sectFiveImageTwo - 1)
+        }
+
+        if(sectFiveImageThree == 0){
+            setSectFiveImageThree(4)
+        }
+        else{
+            setSectFiveImageThree(sectFiveImageThree - 1)
+        }
+
+        if(sectFiveImageFour == 0){
+            setSectFiveImageFour(4)
+        }
+        else{
+            setSectFiveImageFour(sectFiveImageFour - 1)
+        }
+
+        if(sectFiveImageFive == 0){
+            setSectFiveImageFive(4)
+        }
+        else{
+            setSectFiveImageFive(sectFiveImageFive - 1)
+        }
+    }
 
     return(
         <>
@@ -511,16 +594,68 @@ export default function HomePage(){
                 </section>
                 <section className={classes.sect_five}>
                     <div className={classes.con}>
+                        <div className={classes.back}>
+                            <img src={red_highlight} alt="" />
+                        </div>
                         <div className={classes.title}>
                             <p>Unforgettable Moments, Beautifully Crafted, Memories That Last Forever</p>
                         </div>
                         <div className={classes.slider}>
-                            
+                            <div className={classes.buttons}>
+                                <div className={classes.prev} onClick={SectFiveSliderPrev}>
+                                    <img src={SectFiveArrow} alt="" />
+                                </div>
+                                <div className={classes.next} onClick={SectFiveSliderNext}>
+                                    <img src={SectFiveArrow} alt="" />
+                                </div>
+                            </div>
+                            <div className={classes.images}>
+                                <img src="" alt="" style={{
+                                    width: SliderValues[sectFiveImageOne].width,
+                                    height: SliderValues[sectFiveImageOne].height,
+                                    rotate: SliderValues[sectFiveImageOne].rotation,
+                                    zIndex: SliderValues[sectFiveImageOne].index,
+                                    left: SliderValues[sectFiveImageOne].position,
+                                    bottom: SliderValues[sectFiveImageOne].y,
+                                }}/>
+                                <img src="" alt="" style={{
+                                    width: SliderValues[sectFiveImageTwo].width,
+                                    height: SliderValues[sectFiveImageTwo].height,
+                                    rotate: SliderValues[sectFiveImageTwo].rotation,
+                                    zIndex: SliderValues[sectFiveImageTwo].index,
+                                    left: SliderValues[sectFiveImageTwo].position,
+                                    bottom: SliderValues[sectFiveImageTwo].y,
+                                }}/>
+                                <img src="" alt="" style={{
+                                    width: SliderValues[sectFiveImageThree].width,
+                                    height: SliderValues[sectFiveImageThree].height,
+                                    rotate: SliderValues[sectFiveImageThree].rotation,
+                                    zIndex: SliderValues[sectFiveImageThree].index,
+                                    left: SliderValues[sectFiveImageThree].position,
+                                    bottom: SliderValues[sectFiveImageThree].y,
+                                }}/>
+                                <img src="" alt="" style={{
+                                    width: SliderValues[sectFiveImageFour].width,
+                                    height: SliderValues[sectFiveImageFour].height,
+                                    rotate: SliderValues[sectFiveImageFour].rotation,
+                                    zIndex: SliderValues[sectFiveImageFour].index,
+                                    left: SliderValues[sectFiveImageFour].position,
+                                    bottom: SliderValues[sectFiveImageFour].y,
+                                }}/>
+                                <img src="" alt="" style={{
+                                    width: SliderValues[sectFiveImageFive].width,
+                                    height: SliderValues[sectFiveImageFive].height,
+                                    rotate: SliderValues[sectFiveImageFive].rotation,
+                                    zIndex: SliderValues[sectFiveImageFive].index,
+                                    left: SliderValues[sectFiveImageFive].position,
+                                    bottom: SliderValues[sectFiveImageFive].y,
+                                }}/>
+                            </div>
                         </div>
                         <div className={classes.bottom}>
                             <div className={classes.text}>
-                                <p>{sectFiveCardTitle}</p>
-                                <p>{sectFiveCardDesc}</p>
+                                <p>{SliderValues[sectFiveImageThree].title}</p>
+                                <p>{SliderValues[sectFiveImageThree].desc}</p>
                             </div>
                             <div className={classes.button}>
                                 <button type="button">See More</button>
