@@ -2,8 +2,10 @@ import Header from "../Components/Header/header"
 import classes from './menuPage.module.scss'
 import './menuSwiper.scss'
 
-import star from './img/star.png'
 import circle from './img/circle.png'
+
+import Faq from "../Components/FaqSection/faq"
+import Slider from "../Components/LastSlider/slider"
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -11,8 +13,16 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 import { Navigation } from 'swiper/modules';
+import red_highlight from './img/red_highlight.png'
+
+import { useState } from "react"
+import Dish from "./dishes/dish"
+
+import Footer from "../Components/Footer/footer"
 
 export default function MenuPage(){
+    const [selectedTag, setSelectedTag] = useState(1)
+
     return(
         <>
             <Header color={'yellow'} title_top={'Discover, Select, Enjoy – Your'} title_bot={'Perfect Choice Awaits'}/>
@@ -35,148 +45,155 @@ export default function MenuPage(){
                             _slideClass={classes.swiper_slide}
                         >
                                 <SwiperSlide>
-                                    <div className={classes.swiper_slide}>
-                                        <div className={classes.image}>
-                                            <img src="" alt="" />
-                                        </div>
-                                        <div className={classes.info}>
-                                            <div className={classes.title_and_desc}>
-                                                <div className={classes.title}>
-                                                    <p>Truffle-infused Wagyu Delight</p>
-                                                </div>
-                                                <div className={classes.desc}>
-                                                    <p>Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.</p>
-                                                </div>
-                                            </div>
-                                            <div className={classes.rating_and_price}>
-                                                <div className={classes.rating}>
-                                                    <img src={star} alt="" />
-                                                    <img src={star} alt="" />
-                                                    <img src={star} alt="" />
-                                                    <img src={star} alt="" />
-                                                    <img src={star} alt="" />
-                                                </div>
-                                                <div className={classes.price}>
-                                                    <p>$12,00</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <Dish
+                                        title={'Truffle-infused Wagyu Delight'}
+                                        desc={'Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.'}
+                                        rating={5}
+                                        price={'12,00'}
+                                    />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div className={classes.swiper_slide}>
-                                        <div className={classes.image}>
-                                            <img src="" alt="" />
-                                        </div>
-                                        <div className={classes.info}>
-                                            <div className={classes.title}>
-                                                <p></p>
-                                            </div>
-                                            <div className={classes.desc}>
-                                                <p></p>
-                                            </div>
-                                            <div className={classes.rating_and_price}>
-                                                <div className={classes.rating}>
-                                                    <img src="" alt="" />
-                                                    <img src="" alt="" />
-                                                    <img src="" alt="" />
-                                                    <img src="" alt="" />
-                                                    <img src="" alt="" />
-                                                </div>
-                                                <div className={classes.price}>
-                                                    <p>$12,00</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <Dish
+                                        title={'Ocean Symphony Risotto'}
+                                        desc={'Creamy saffron-infused risotto with fresh lobster, scallops, and prawns, finished with parmesan and herbs'}
+                                        rating={4}
+                                        price={'12,00'}
+                                    />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div className={classes.swiper_slide}>
-                                        <div className={classes.image}>
-                                            <img src="" alt="" />
-                                        </div>
-                                        <div className={classes.info}>
-                                            <div className={classes.title}>
-                                                <p></p>
-                                            </div>
-                                            <div className={classes.desc}>
-                                                <p></p>
-                                            </div>
-                                            <div className={classes.rating_and_price}>
-                                                <div className={classes.rating}>
-                                                    <img src="" alt="" />
-                                                    <img src="" alt="" />
-                                                    <img src="" alt="" />
-                                                    <img src="" alt="" />
-                                                    <img src="" alt="" />
-                                                </div>
-                                                <div className={classes.price}>
-                                                    <p></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <Dish
+                                        title={'Golden Crispy Duck Confit'}
+                                        desc={'Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.'}
+                                        rating={4}
+                                        price={'12,00'}
+                                    />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div className={classes.swiper_slide}>
-                                        <div className={classes.image}>
-                                            <img src="" alt="" />
-                                        </div>
-                                        <div className={classes.info}>
-                                            <div className={classes.title}>
-                                                <p></p>
-                                            </div>
-                                            <div className={classes.desc}>
-                                                <p></p>
-                                            </div>
-                                            <div className={classes.rating_and_price}>
-                                                <div className={classes.rating}>
-                                                    <img src="" alt="" />
-                                                    <img src="" alt="" />
-                                                    <img src="" alt="" />
-                                                    <img src="" alt="" />
-                                                    <img src="" alt="" />
-                                                </div>
-                                                <div className={classes.price}>
-                                                    <p></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <Dish
+                                        title={'Velvet Chocolate Lava Cake'}
+                                        desc={'Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.'}
+                                        rating={5}
+                                        price={'12,00'}
+                                    />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div className={classes.swiper_slide}>
-                                        <div className={classes.image}>
-                                            <img src="" alt="" />
-                                        </div>
-                                        <div className={classes.info}>
-                                            <div className={classes.title_and_desc}>
-                                                <div className={classes.title}>
-                                                    <p>Truffle-infused Wagyu Delight</p>
-                                                </div>
-                                                <div className={classes.desc}>
-                                                    <p>Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.</p>
-                                                </div>
-                                            </div>
-                                            <div className={classes.rating_and_price}>
-                                                <div className={classes.rating}>
-                                                    <img src={star} alt="" />
-                                                    <img src={star} alt="" />
-                                                    <img src={star} alt="" />
-                                                    <img src={star} alt="" />
-                                                    <img src={star} alt="" />
-                                                </div>
-                                                <div className={classes.price}>
-                                                    <p>$12,00</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <Dish
+                                        title={'Truffle-infused Wagyu Delight'}
+                                        desc={'Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.'}
+                                        rating={5}
+                                        price={'12,00'}
+                                    />
                                 </SwiperSlide>                           
                         </Swiper>
                     </div>
                 </section>
+                <section className={classes.sect_three}>
+                    <div className={classes.con}>
+                        <div className={classes.top}>
+                            <div className={classes.title_and_desc}>
+                                <p>Savor the Flavor, Delight in Every Bite!</p>
+                                <p>Explore our menu filled with mouthwatering dishes, crafted with passion and the freshest ingredients to satisfy every craving</p>
+                            </div>
+                            <div className={classes.tags}>
+                                <p className={selectedTag == 1 ? classes.active : null} onClick={()=>setSelectedTag(1)}>Appetizers</p>
+                                <p className={selectedTag == 2 ? classes.active : null} onClick={()=>setSelectedTag(2)}>Soups & Salads</p>
+                                <p className={selectedTag == 3 ? classes.active : null} onClick={()=>setSelectedTag(3)}>Main Course</p>
+                                <p className={selectedTag == 4 ? classes.active : null} onClick={()=>setSelectedTag(4)}>Side Dishes</p>
+                                <p className={selectedTag == 5 ? classes.active : null} onClick={()=>setSelectedTag(5)}>Desserts</p>
+                                <p className={selectedTag == 6 ? classes.active : null} onClick={()=>setSelectedTag(6)}>Beverages</p>
+                            </div>
+                        </div>
+                        <div className={classes.dishes}>
+                            <div className={classes.highlight}>
+                                <img src={red_highlight} alt="" />
+                            </div>
+                            <div className={classes.line}>
+                                <Dish
+                                    title={'Truffle-infused Wagyu Delight'}
+                                    desc={'Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.'}
+                                    rating={5}
+                                    price={'12,00'}
+                                />
+                                <Dish
+                                    title={'Truffle-infused Wagyu Delight'}
+                                    desc={'Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.'}
+                                    rating={5}
+                                    price={'12,00'}
+                                />
+                                <Dish
+                                    title={'Truffle-infused Wagyu Delight'}
+                                    desc={'Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.'}
+                                    rating={5}
+                                    price={'12,00'}
+                                />
+                            </div>
+                            <div className={classes.line}>
+                                <Dish
+                                    title={'Truffle-infused Wagyu Delight'}
+                                    desc={'Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.'}
+                                    rating={5}
+                                    price={'12,00'}
+                                />
+                                <Dish
+                                    title={'Truffle-infused Wagyu Delight'}
+                                    desc={'Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.'}
+                                    rating={5}
+                                    price={'12,00'}
+                                />
+                                <Dish
+                                    title={'Truffle-infused Wagyu Delight'}
+                                    desc={'Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.'}
+                                    rating={5}
+                                    price={'12,00'}
+                                />
+                            </div>
+                            <div className={classes.line}>
+                                <Dish
+                                    title={'Truffle-infused Wagyu Delight'}
+                                    desc={'Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.'}
+                                    rating={5}
+                                    price={'12,00'}
+                                />
+                                <Dish
+                                    title={'Truffle-infused Wagyu Delight'}
+                                    desc={'Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.'}
+                                    rating={5}
+                                    price={'12,00'}
+                                />
+                                <Dish
+                                    title={'Truffle-infused Wagyu Delight'}
+                                    desc={'Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.'}
+                                    rating={5}
+                                    price={'12,00'}
+                                />
+                            </div>
+                            <div className={classes.line}>
+                                <Dish
+                                    title={'Truffle-infused Wagyu Delight'}
+                                    desc={'Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.'}
+                                    rating={5}
+                                    price={'12,00'}
+                                />
+                                <Dish
+                                    title={'Truffle-infused Wagyu Delight'}
+                                    desc={'Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.'}
+                                    rating={5}
+                                    price={'12,00'}
+                                />
+                                <Dish
+                                    title={'Truffle-infused Wagyu Delight'}
+                                    desc={'Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.'}
+                                    rating={5}
+                                    price={'12,00'}
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <Faq/>
+                <Slider/>
             </main>
+            <Footer/>
         </>
     )
 }
