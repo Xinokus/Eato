@@ -44,6 +44,7 @@ import SectEightArrow from './img/sect_eight_arrow.png'
 import SectEightSliderValues from './sect_eight/slider_values'
 
 import Footer from '../Components/Footer/footer'
+import BigSlider from '../Components/BigSlider/slider'
 
 
 export default function HomePage(){
@@ -646,77 +647,7 @@ export default function HomePage(){
                         </div>
                     </div>
                 </section>
-                <section className={classes.sect_five}>
-                    <div className={classes.con}>
-                        <div className={classes.back}>
-                            <img src={red_highlight} alt="" />
-                        </div>
-                        <div className={classes.title}>
-                            <p>Unforgettable Moments, Beautifully Crafted, Memories That Last Forever</p>
-                        </div>
-                        <div className={classes.slider}>
-                            <div className={classes.buttons}>
-                                <div className={classes.prev} onClick={SectFiveSliderPrev}>
-                                    <img src={SectFiveArrow} alt="" />
-                                </div>
-                                <div className={classes.next} onClick={SectFiveSliderNext}>
-                                    <img src={SectFiveArrow} alt="" />
-                                </div>
-                            </div>
-                            <div className={classes.images}>
-                                <img src="" alt="" style={{
-                                    width: SliderValues[sectFiveImageOne].width,
-                                    height: SliderValues[sectFiveImageOne].height,
-                                    rotate: SliderValues[sectFiveImageOne].rotation,
-                                    zIndex: SliderValues[sectFiveImageOne].index,
-                                    left: SliderValues[sectFiveImageOne].position,
-                                    bottom: SliderValues[sectFiveImageOne].y,
-                                }}/>
-                                <img src="" alt="" style={{
-                                    width: SliderValues[sectFiveImageTwo].width,
-                                    height: SliderValues[sectFiveImageTwo].height,
-                                    rotate: SliderValues[sectFiveImageTwo].rotation,
-                                    zIndex: SliderValues[sectFiveImageTwo].index,
-                                    left: SliderValues[sectFiveImageTwo].position,
-                                    bottom: SliderValues[sectFiveImageTwo].y,
-                                }}/>
-                                <img src="" alt="" style={{
-                                    width: SliderValues[sectFiveImageThree].width,
-                                    height: SliderValues[sectFiveImageThree].height,
-                                    rotate: SliderValues[sectFiveImageThree].rotation,
-                                    zIndex: SliderValues[sectFiveImageThree].index,
-                                    left: SliderValues[sectFiveImageThree].position,
-                                    bottom: SliderValues[sectFiveImageThree].y,
-                                }}/>
-                                <img src="" alt="" style={{
-                                    width: SliderValues[sectFiveImageFour].width,
-                                    height: SliderValues[sectFiveImageFour].height,
-                                    rotate: SliderValues[sectFiveImageFour].rotation,
-                                    zIndex: SliderValues[sectFiveImageFour].index,
-                                    left: SliderValues[sectFiveImageFour].position,
-                                    bottom: SliderValues[sectFiveImageFour].y,
-                                }}/>
-                                <img src="" alt="" style={{
-                                    width: SliderValues[sectFiveImageFive].width,
-                                    height: SliderValues[sectFiveImageFive].height,
-                                    rotate: SliderValues[sectFiveImageFive].rotation,
-                                    zIndex: SliderValues[sectFiveImageFive].index,
-                                    left: SliderValues[sectFiveImageFive].position,
-                                    bottom: SliderValues[sectFiveImageFive].y,
-                                }}/>
-                            </div>
-                        </div>
-                        <div className={classes.bottom}>
-                            <div className={classes.text}>
-                                <p>{SliderValues[sectFiveImageThree].title}</p>
-                                <p>{SliderValues[sectFiveImageThree].desc}</p>
-                            </div>
-                            <div className={classes.button}>
-                                <button type="button">See More</button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <BigSlider/>
                 <section className={classes.sect_six}>
                     <div className={classes.highlight}>
                         <img src={red_highlight} alt="" />

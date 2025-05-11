@@ -1,0 +1,378 @@
+@import '../Necessities/fonts.scss';
+
+.sect_one{
+    width: 100%;
+    height: 1320px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    background-color: #070707;
+    position: relative;
+    overflow: hidden;
+    .highlight{
+        position: absolute;
+        z-index: 0;
+        pointer-events: none;
+        filter: blur(568px);
+        transform: translate(480px, 767px);
+    }
+    .con{
+        width: 1280px;
+        height: 1160px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 80px;
+        position: relative;
+        z-index: 1;
+        .top{
+            width: 802px;
+            height: 252px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            .title{
+                @include H2Semibold;
+                color: white;
+                text-align: center
+            }
+            .desc{
+                @include BodyMediumRegular;
+                color: white;
+                text-align: center;
+                width: 542px;
+            }
+            .search{
+                width: 461px;
+                height: 52px;
+                display: flex;
+                align-items: center;
+                padding: 14px;
+                box-sizing: border-box;
+                border-radius: 12px;
+                background-color: rgb(255, 255, 255, 0.12);
+                img{
+                    margin-right: 12px;
+                }
+                input{
+                    height: 40px;
+                    width: 390px;
+                    font-size: 16px;
+                    line-height: 24px;
+                    font-family: Inter Tight;
+                    font-weight: 500;
+                    border: none;
+                    background: none;
+                    color: white;
+                }
+            }
+        }
+        .bot{
+            width: 1280px;
+            height: 872px;
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            .left{
+                width: 667px;
+                height: 872px;
+                display: flex;
+                justify-content: space-between;
+                align-items: start;
+                flex-direction: column;
+                .image{
+                    width: 667px;
+                    height: 612px;
+                    background-color: gainsboro;
+                }
+                .info{
+                    width: 667px;
+                    height: 224px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: start;
+                    flex-direction: column;
+                    .tags{
+                        width: 191px;
+                        height: 24px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .trend_type{
+                            width: 93px;
+                        }
+                        .time_to_read{
+                            width: 86px;
+                        }
+                        div{
+                            height: 24px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 24px;
+                            background-color: #FFC62B;
+                            color: #C31E26;
+                            font-size: 12px;
+                            line-height: 16px;
+                            font-family: Inter Tight;
+                            font-weight: 400;
+                        }
+                    }
+                    .title{
+                        @include H4Semibold;
+                        color: white;
+                    }
+                    .desc{
+                        width: 628px;
+                        color: white;
+                        font-size: 12px;
+                        line-height: 16px;
+                        font-family: Inter Tight;
+                        font-weight: 400;
+                    }
+                }
+            }
+            .right{
+                width: 588px;
+                height: 872px;
+                display: flex;
+                justify-content: space-between;
+                align-items: start;
+                flex-direction: column;
+                .trend{
+                    width: 588px;
+                    height: 200px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: start;
+                    .image{
+                        width: 230px;
+                        height: 200px;
+                        background-color: gainsboro;
+                    }
+                    .info{
+                        width: 345px;
+                        height: 200px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: start;
+                        flex-direction: column;
+                        .text{
+                            width: 345px;
+                            height: 110px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: start;
+                            flex-direction: column;
+                            color: white;
+                            p:nth-of-type(1){
+                                font-size: 16px;
+                                line-height: 24px;
+                                font-family: Inter Tight;
+                                font-weight: 500;
+                            }
+                            p:nth-of-type(2){
+                                font-size: 12px;
+                                line-height: 16px;
+                                font-family: Inter Tight;
+                                font-weight: 400;
+                            }
+                        }
+                        .tags{
+                            width: 191px;
+                            height: 24px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            .trend_type{
+                                width: 93px;
+                            }
+                            .time_to_read{
+                                width: 86px;
+                            }
+                            div{
+                                height: 24px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border-radius: 24px;
+                                background-color: #FFC62B;
+                                color: #C31E26;
+                                font-size: 12px;
+                                line-height: 16px;
+                                font-family: Inter Tight;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.sect_two{
+    width: 100%;
+    height: 765px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #070707;
+    .con{
+        width: 1280px;
+        height: 553px;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        .left{
+            width: 628px;
+            height: 553px;
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            flex-direction: column;
+            .title{
+                width: 628px;
+                height: 404px;
+                display: flex;
+                justify-content: space-between;
+                align-items: start;
+                flex-direction: column;
+                p:nth-of-type(1){
+                    font-size: 32px;
+                    font-family: Inter Tight;
+                    line-height: 40px;
+                    font-weight: 600;
+                    color: white;
+                }
+                p:nth-of-type(2){
+                    font-size: 18px;
+                    font-family: Inter Tight;
+                    line-height: 26px;
+                    font-weight: 400;
+                    color: white;
+                    width: 590px;
+                }
+            }
+            .tags{
+                width: 191px;
+                height: 24px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                p{
+                    font-size: 12px;
+                    font-family: Inter Tight;
+                    line-height: 16px;
+                    font-weight: 400;
+                    color: #C31E26;
+                    background-color: #FFC62B;
+                    padding: 4px;
+                    padding-left: 14px;
+                    padding-right: 14px;
+                    box-sizing: border-box;
+                    border-radius: 24px;
+                }
+            }
+        }
+        .right{
+            img{
+                width: 628px;
+                height: 553px;
+                background-color: gainsboro;
+            }
+        }
+    }
+}
+.sect_three{
+    width: 100%;
+    height: 1288px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #070707;
+    .con{
+        width: 1284px;
+        height: 1128px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        .top{
+            width: 1284px;
+            height: 483px;
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            img{
+                width: 628px;
+                height: 483px;
+                background-color: gainsboro;
+            }
+        }
+        .bot{
+            width: 1283px;
+            height: 613px;
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            .card{
+                width: 411px;
+                height: 613px;
+                display: flex;
+                justify-content: space-between;
+                align-items: start;
+                flex-direction: column;
+                padding: 14px;
+                box-sizing: border-box;
+                background-color: rgb(255, 255, 255, 0.12);
+                border-radius: 12px;
+                .image img{
+                    width: 383px;
+                    height: 387px;
+                    background-color: gainsboro;
+                }
+                .title{
+                    width: 383px;
+                    height: 126px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: start;
+                    flex-direction: column;
+                    p:nth-of-type(1){
+                        @include H5Semibold;
+                        color: white;
+                    }
+                    p:nth-of-type(2){
+                        font-size: 12px;
+                        font-family: Inter Tight;
+                        line-height: 16px;
+                        font-weight: 400;
+                        color: white;
+                    }
+                }
+                .tags{
+                    width: 191px;
+                    height: 24px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    p{
+                        font-size: 12px;
+                        font-family: Inter Tight;
+                        line-height: 16px;
+                        font-weight: 400;
+                        color: #C31E26;
+                        background-color: #FFC62B;
+                        padding: 4px;
+                        padding-left: 14px;
+                        padding-right: 14px;
+                        box-sizing: border-box;
+                        border-radius: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
