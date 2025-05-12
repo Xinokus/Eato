@@ -9,6 +9,9 @@ import FaqPage from './FaqPage/faq'
 import ContactPage from './ContactPage/contactPage'
 import SpecialPage from './SpecialPage/specialPage'
 import BlogPage from './BlogPage/blogPage'
+import EventsPage from './EventsPage/eventsPage'
+import GalleryPage from './GalleryPage/galleryPage'
+import ReviewPage from './ReviewPage/reviewPage'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -19,9 +22,9 @@ createRoot(document.getElementById('root')).render(
         <Route path='/menu' element={<MenuPage/>}/>
         <Route path='/about' element={<AboutPage/>}/>
         <Route path='/reservation' element={<AboutPage/>}/>
-        <Route path='/events' element={<AboutPage/>}/>
-        <Route path='/gallery' element={<AboutPage/>}/>
-        <Route path='/reviews' element={<AboutPage/>}/>
+        <Route path='/events' element={<EventsPage/>}/>
+        <Route path='/gallery' element={<GalleryPage/>}/>
+        <Route path='/reviews' element={<ReviewPage/>}/>
         <Route path='/blog' element={<BlogPage/>}/>
         <Route path='/special' element={<SpecialPage/>}/>
         <Route path='/faq' element={<FaqPage/>}/>
