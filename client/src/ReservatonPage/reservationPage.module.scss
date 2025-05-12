@@ -1,0 +1,180 @@
+@import '../Necessities/fonts.scss';
+
+.sect_one{
+    width: 100%;
+    height: 1407px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #070707;
+    .con{
+        width: 1280px;
+        height: 1287px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        .top{
+            width: 802px;
+            height: 164px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            p:nth-of-type(1){
+                @include H2Semibold;
+                color: white;
+            }
+            p:nth-of-type(2){
+                @include BodyMediumRegular;
+                color: white;
+                width: 492px;
+            }
+        }
+        .bot{
+            width: 1280px;
+            height: 1063px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            padding: 24px;
+            box-sizing: border-box;
+            background-color: rgb(255, 255, 255, 0.12);
+            border-radius: 24px;
+            .inputs{
+                width: 1229px;
+                height: 939px;
+                display: flex;
+                justify-content: space-between;
+                align-items: start;
+                flex-direction: column;
+                .one, .two{
+                    width: 1229px;
+                    height: 118px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: start;
+                    .input{
+                        width: 606px;
+                        height: 118px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: start;
+                        flex-direction: column;
+                        label{
+                            font-size: 24px;
+                            line-height: 32px;
+                            font-family: Inter Tight;
+                            font-weight: 500;
+                            color: white;
+                        }
+                        input{
+                            width: 606px;
+                            height: 74px;
+                            background-color: rgb(255, 255, 255, 0.12);
+                            padding: 24px;
+                            color: white;
+                            font-size: 18px;
+                            line-height: 26px;
+                            font-family: Inter Tight;
+                            font-weight: 500;
+                            box-sizing: border-box;
+                            border: none;
+                            border-radius: 12px;
+                        }
+                    }
+                }
+                .three{
+                    width: 1229px;
+                    height: 600px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: start;
+
+                }
+            }
+            .button button{
+                width: 130px;
+                height: 36px;
+                background-color: #FFC62B;
+                color: #C31E26;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.sect_two{
+    width: 100%;
+    height: 576px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #C31E26;
+    .con{
+        width: 1440px;
+        height: 576px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .left{
+            width: 626px;
+            height: 316px;
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            flex-direction: column;
+            margin-left: 82px;
+            .tag{
+                width: 226px;
+                height: 42px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(255, 255, 255, 0.12);
+                color: white;
+                border-radius: 42px;
+                font-size: 18px;
+                line-height: 26px;
+                font-weight: 400;
+                font-family: Inter Tight;
+            }
+            .title{
+                font-size: 32px;
+                line-height: 40px;
+                font-weight: 600;
+                font-family: Inter Tight;
+                color: white;
+            }
+            .desc{
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 400;
+                font-family: Inter Tight;
+                color: white;
+            }
+            .button button{
+                width: 130px;
+                height: 36px;
+                background-color: #FFC62B;
+                color: #C31E26;
+                border-radius: 8px;
+                border: none;
+                @include BodyMediumMedium;
+                cursor: pointer;
+            }
+        }
+        .right{
+            width: 719px;
+            height: 576px;
+            img{
+                width: 719px;
+                height: 576px;
+                background-color: gainsboro;
+            }
+        }
+    }
+}

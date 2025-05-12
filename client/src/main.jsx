@@ -12,6 +12,7 @@ import BlogPage from './BlogPage/blogPage'
 import EventsPage from './EventsPage/eventsPage'
 import GalleryPage from './GalleryPage/galleryPage'
 import ReviewPage from './ReviewPage/reviewPage'
+import ReservationPage from './ReservatonPage/reservationPage'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -21,7 +22,7 @@ createRoot(document.getElementById('root')).render(
         <Route path='/' element={<HomePage/>}/>
         <Route path='/menu' element={<MenuPage/>}/>
         <Route path='/about' element={<AboutPage/>}/>
-        <Route path='/reservation' element={<AboutPage/>}/>
+        <Route path='/reservation' element={<ReservationPage/>}/>
         <Route path='/events' element={<EventsPage/>}/>
         <Route path='/gallery' element={<GalleryPage/>}/>
         <Route path='/reviews' element={<ReviewPage/>}/>
