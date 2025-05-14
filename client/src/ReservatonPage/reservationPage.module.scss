@@ -45,7 +45,7 @@
             border-radius: 24px;
             .inputs{
                 width: 1229px;
-                height: 939px;
+                height: 883px;
                 display: flex;
                 justify-content: space-between;
                 align-items: start;
@@ -84,6 +84,23 @@
                             border: none;
                             border-radius: 12px;
                         }
+                        select{
+                            width: 606px;
+                            height: 74px;
+                            background-color: rgb(255, 255, 255, 0.12);
+                            padding: 24px;
+                            color: white;
+                            font-size: 18px;
+                            line-height: 26px;
+                            font-family: Inter Tight;
+                            font-weight: 500;
+                            box-sizing: border-box;
+                            border: none;
+                            border-radius: 12px;
+                            appearance: none;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                        }
                     }
                 }
                 .three{
@@ -92,7 +109,227 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: start;
-
+                    .left, .right{
+                        width: 606px;
+                        height: 600px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: start;
+                        flex-direction: column;
+                        .calendar{
+                            width: 606px;
+                            height: 470px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            flex-direction: column;
+                            background-color: #C31E26;
+                            border-radius: 12px;
+                            .month{
+                                width: 306px;
+                                height: 38px;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                margin-top: 11px;
+                                p{
+                                    font-size: 24px;
+                                    font-weight: 500;
+                                    font-family: Inter Tight;
+                                    line-height: 32px;
+                                    color: white;
+                                }
+                                button:nth-of-type(1) img{
+                                    rotate: 180deg;
+                                }
+                                button{
+                                    width: 38px;
+                                    height: 38px;
+                                    background-color: white;
+                                    border-radius: 8px;
+                                    border: none;
+                                    cursor: pointer;
+                                }
+                            }
+                            .day{
+                                width: 606px;
+                                height: 402px;
+                                background-color: #252525;
+                                border: 1px solid rgb(255, 255, 255, 0.12);
+                                border-bottom-left-radius: 12px;
+                                border-bottom-right-radius: 12px;
+                                box-sizing: border-box;
+                                border-top: none;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                flex-direction: column;
+                                .week{
+                                    width: 606px;
+                                    height: 52px;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    padding-left: 24px;
+                                    padding-right: 24px;
+                                    box-sizing: border-box;
+                                    p{
+                                        width: 63px;
+                                        height: 52px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        font-size: 16px;
+                                        font-weight: 500;
+                                        font-family: Inter Tight;
+                                        line-height: 24px;
+                                        color: white;
+                                    }
+                                }
+                                .choice{
+                                    width: 606px;
+                                    height: 336px;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    flex-direction: column;
+                                    .line{
+                                        width: 606px;
+                                        height: 50px;
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        padding-left: 24px;
+                                        padding-right: 24px;
+                                        box-sizing: border-box;
+                                        .inactive{
+                                            color: #575757;
+                                            pointer-events: none;
+                                        }
+                                        p{
+                                            width: 50px;
+                                            margin-left: 6.5px;
+                                            margin-right: 6.5px;
+                                            height: 50px;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            font-size: 16px;
+                                            font-weight: 500;
+                                            font-family: Inter Tight;
+                                            line-height: 24px;
+                                            color: white;
+                                            cursor: pointer;
+                                            &:hover{
+                                                background-color: #FFC62B;
+                                                border-radius: 40px;
+                                                color: #C31E26;
+                                            }
+                                            &.active{
+                                                background-color: #FFC62B;
+                                                border-radius: 40px;
+                                                color: #C31E26;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .textarea{
+                            width: 606px;
+                            height: 411px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: start;
+                            flex-direction: column;
+                            label{
+                                font-size: 24px;
+                                line-height: 32px;
+                                font-family: Inter Tight;
+                                font-weight: 500;
+                                color: white;
+                            }
+                            textarea{
+                                resize: none;
+                                width: 606px;
+                                height: 367px;
+                                background-color: rgb(255, 255, 255, 0.12);
+                                padding: 24px;
+                                color: white;
+                                font-size: 18px;
+                                line-height: 26px;
+                                font-family: Inter Tight;
+                                font-weight: 500;
+                                box-sizing: border-box;
+                                border: none;
+                                border-radius: 12px;
+                            }
+                            
+                        }
+                        .input{
+                            width: 606px;
+                            height: 118px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: start;
+                            flex-direction: column;
+                            label{
+                                font-size: 24px;
+                                line-height: 32px;
+                                font-family: Inter Tight;
+                                font-weight: 500;
+                                color: white;
+                            }
+                            input{
+                                width: 606px;
+                                height: 74px;
+                                background-color: rgb(255, 255, 255, 0.12);
+                                padding: 24px;
+                                color: white;
+                                font-size: 18px;
+                                line-height: 26px;
+                                font-family: Inter Tight;
+                                font-weight: 500;
+                                box-sizing: border-box;
+                                border: none;
+                                border-radius: 12px;
+                            }
+                            select{
+                                width: 606px;
+                                height: 74px;
+                                background-color: rgb(255, 255, 255, 0.12);
+                                padding: 24px;
+                                color: white;
+                                font-size: 18px;
+                                line-height: 26px;
+                                font-family: Inter Tight;
+                                font-weight: 500;
+                                box-sizing: border-box;
+                                border: none;
+                                border-radius: 12px;
+                                appearance: none;
+                                -webkit-appearance: none;
+                                -moz-appearance: none;
+                            }
+                        }
+                        .check{
+                            width: 506px;
+                            height: 32px;
+                            display: flex;
+                            justify-content: start;
+                            align-items: center;
+                            input{
+                                cursor: pointer;
+                                width: 18px;
+                                height: 18px;
+                            }
+                            p{
+                                margin-left: 12px;
+                                @include BodyLargeRegular;
+                                color: white;
+                            }
+                        }
+                    }
                 }
             }
             .button button{
@@ -103,6 +340,7 @@
                 border: none;
                 border-radius: 8px;
                 cursor: pointer;
+                @include BodyMediumMedium;
             }
         }
     }

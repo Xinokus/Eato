@@ -43,8 +43,75 @@
             }
         }
         .reviews{
-            width: 1440px;
+            width: 1504px;
             height: 372px;
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            .review{
+                width: 416px;
+                height: 372px;
+            }
+            .big_review{
+                width: 627px;
+                height: 372px;
+            }
+            .review, .big_review{
+                display: flex;
+                justify-content: space-between;
+                align-items: start;
+                flex-direction: column;
+                color: white;
+                padding: 24px;
+                box-sizing: border-box;
+                background-color: rgb(255, 255, 255, 0.12);
+                border-radius: 12px;
+                .rating{
+                    width: 176px;
+                    height: 32px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                .comment{
+                    width: 100%;
+                    height: 192px;
+                    @include BodyLargeRegular;
+                }
+                .person{
+                    width: 300px;
+                    height: 52px;
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    .pfp img{
+                        width: 52px;
+                        height: 52px;
+                        border-radius: 52px;
+                        background-color: gainsboro;
+                        margin-right: 8px;
+                    }
+                    .info{
+                        height: 50px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: start;
+                        flex-direction: column;
+                        p:nth-of-type(1){
+                            font-size: 18px;
+                            font-weight: 500;
+                            line-height: 26px;
+                            font-family: Inter Tight;
+                        }
+                        p:nth-of-type(2){
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 20px;
+                            font-family: Inter Tight;
+                        }
+                    }
+                }
+            }
         }
     }
 }

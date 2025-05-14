@@ -81,6 +81,16 @@ export default function GalleryPage(){
                                 at={'Estherhoward'}
                                 text={'Where love meets flavor! 💍✨our breathtaking wedding venue while indulging in exquisite culinary delights. A perfect blend of romance and taste awaits! 🍽️💕 #DreamWedding #FineDining #UnforgettableMoments'}
                             />
+                            <Post
+                                name={'Esther Howard'}
+                                at={'Estherhoward'}
+                                text={'Where love meets flavor! 💍✨our breathtaking wedding venue while indulging in exquisite culinary delights. A perfect blend of romance and taste awaits! 🍽️💕 #DreamWedding #FineDining #UnforgettableMoments'}
+                            />
+                            <Post
+                                name={'Esther Howard'}
+                                at={'Estherhoward'}
+                                text={'Where love meets flavor! 💍✨our breathtaking wedding venue while indulging in exquisite culinary delights. A perfect blend of romance and taste awaits! 🍽️💕 #DreamWedding #FineDining #UnforgettableMoments'}
+                            />
                         </div>
                     </div>
                 </section>

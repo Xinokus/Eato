@@ -240,8 +240,11 @@
             }
         }
         .bottom{
-            width: 1440px;
+            width: 1480px;
             height: 701px;
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
             .post{
                 width: 482px;
                 height: 701px;
