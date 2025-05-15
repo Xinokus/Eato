@@ -45,6 +45,8 @@ import SectEightSliderValues from './sect_eight/slider_values'
 
 import Footer from '../Components/Footer/footer'
 import BigSlider from '../Components/BigSlider/slider'
+import Faq from '../Components/FaqSection/faq'
+import Slider from '../Components/LastSlider/slider'
 
 
 export default function HomePage(){
@@ -716,120 +718,8 @@ export default function HomePage(){
                         </div>
                     </div>
                 </section>
-                <section className={classes.sect_seven}>
-                    <Circles/>
-                    <div className={classes.con}>
-                        <div className={classes.top}>
-                            <div className={classes.title}>
-                                <p>Your Questions Answered, Enjoy a Seamless Experience!</p>
-                            </div>
-                            <div className={classes.desc}>
-                                <p>Explore our FAQs to find answers to common inquiries, ensuring a smooth and enjoyable dining experience for all our guests</p>
-                                <button type="button">See More</button>
-                            </div>
-                        </div>
-                        <div className={classes.bot}>
-                            <div className={classes.faq}>
-                                <SectSevenFaq
-                                    title={'What are your restaurant’s hours of operation?'}
-                                    answer={'Our restaurant is open Monday to Sunday from 11:00 AM to 10:00 PM.'}
-                                    active={sectSevenFaqActive == 1 ? true : false}
-                                    onClick={   ()=>setSectSevenFaqActive(1)}
-                                />
-                                <SectSevenFaq
-                                    title={'Do I need a reservation to dine?'}
-                                    answer={'Our restaurant is open Monday to Sunday from 11:00 AM to 10:00 PM.'}
-                                    active={sectSevenFaqActive == 2 ? true : false}
-                                    onClick={()=>setSectSevenFaqActive(2)}
-                                />
-                                <SectSevenFaq
-                                    title={'Can I modify my reservation after booking?'}
-                                    answer={'Our restaurant is open Monday to Sunday from 11:00 AM to 10:00 PM.'}
-                                    active={sectSevenFaqActive == 3 ? true : false}
-                                    onClick={()=>setSectSevenFaqActive(3)}
-                                />
-                                <SectSevenFaq
-                                    title={'Do you offer takeout or delivery services?'}
-                                    answer={'Our restaurant is open Monday to Sunday from 11:00 AM to 10:00 PM.'}
-                                    active={sectSevenFaqActive == 4 ? true : false}
-                                    onClick={()=>setSectSevenFaqActive(4)}
-                                />
-                                <SectSevenFaq
-                                    title={'Are there vegetarian or gluten-free available?'}
-                                    answer={'Our restaurant is open Monday to Sunday from 11:00 AM to 10:00 PM.'}
-                                    active={sectSevenFaqActive == 5 ? true : false}
-                                    onClick={()=>setSectSevenFaqActive(5)}
-                                />
-                                <SectSevenFaq
-                                    title={'Can I host a private event at your restaurant?'}
-                                    answer={'Our restaurant is open Monday to Sunday from 11:00 AM to 10:00 PM.'}
-                                    active={sectSevenFaqActive == 6 ? true : false}
-                                    onClick={()=>setSectSevenFaqActive(6)}
-                                />
-                                <SectSevenFaq
-                                    title={'Do you accommodate requests for celebrations?'}
-                                    answer={'Our restaurant is open Monday to Sunday from 11:00 AM to 10:00 PM.'}
-                                    active={sectSevenFaqActive == 7 ? true : false}
-                                    onClick={()=>setSectSevenFaqActive(7)}
-                                />
-                            </div>
-                            <div className={classes.image}>
-                                <img src="" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section className={classes.sect_eight}>
-                    <div className={classes.con}>
-                        <div className={classes.quote}>
-                            <p>“</p>
-                        </div>
-                        <div className={classes.quote}>
-                            <p>“</p>
-                        </div>
-                        <div className={classes.title}>
-                            <p>{SectEightSliderValues[sectEightImageTwo].comment}</p>
-                        </div>
-                        <div className={classes.slider}>
-                            <div className={classes.top}>
-                                <div className={classes.images}>
-                                    <img src="" alt="" style={{
-                                        width: SectEightSliderValues[sectEightImageOne].width,
-                                        height: SectEightSliderValues[sectEightImageOne].height,
-                                        zIndex: SectEightSliderValues[sectEightImageOne].index,
-                                        left: SectEightSliderValues[sectEightImageOne].x,
-                                        rotate: SectEightSliderValues[sectEightImageOne].rotation,
-                                    }}/>
-                                    <img src="" alt="" style={{
-                                        width: SectEightSliderValues[sectEightImageTwo].width,
-                                        height: SectEightSliderValues[sectEightImageTwo].height,
-                                        zIndex: SectEightSliderValues[sectEightImageTwo].index,
-                                        left: SectEightSliderValues[sectEightImageTwo].x,
-                                        rotate: SectEightSliderValues[sectEightImageTwo].rotation,
-                                    }}/>
-                                    <img src="" alt="" style={{
-                                        width: SectEightSliderValues[sectEightImageThree].width,
-                                        height: SectEightSliderValues[sectEightImageThree].height,
-                                        zIndex: SectEightSliderValues[sectEightImageThree].index,
-                                        left: SectEightSliderValues[sectEightImageThree].x,
-                                        rotate: SectEightSliderValues[sectEightImageThree].rotation,
-                                    }}/>
-                                </div>
-                                <div className={classes.text}>
-                                    <p>{SectEightSliderValues[sectEightImageTwo].name}</p>
-                                </div>
-                            </div>
-                            <div className={classes.directions}>
-                                <div>
-                                    <img src={SectEightArrow} alt="" onClick={SectEightSliderPrev} />
-                                </div>
-                                <div>
-                                    <img src={SectEightArrow} alt="" onClick={SectEightSliderNext} />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <Faq/>
+                <Slider/>
             </main>
             <Footer/>
         </>

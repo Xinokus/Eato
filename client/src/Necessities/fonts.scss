@@ -6,82 +6,138 @@
     font-size: 14px;
     line-height: 20px;
     font-weight: 500;
+    @media screen and (min-width: 1024px) and (max-width: 1439px) {
+        font-size: 12px;
+        line-height: 16px;
+    }
 }
 @mixin BodyLargeMedium{
     font-family: Inter Tight;
     font-size: 16px;
     line-height: 24px;
     font-weight: 500;
+    @media screen and (min-width: 1024px) and (max-width: 1439px) {
+        font-size: 14px;
+        line-height: 20px;
+    }
 }
 @mixin BodyLargeRegular{
     font-family: Inter Tight;
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
+    @media screen and (min-width: 1024px) and (max-width: 1439px) {
+        font-size: 14px;
+        line-height: 20px;
+    }
 }
 @mixin BodyLargeSemibold{
     font-family: Inter Tight;
     font-size: 16px;
     line-height: 24px;
     font-weight: 600;
+    @media screen and (min-width: 1024px) and (max-width: 1439px) {
+        font-size: 14px;
+        line-height: 20px;
+    }
 }
 @mixin H2Semibold{
     font-family: Inter Tight;
     font-size: 48px;
     line-height: 56px;
     font-weight: 600;
+    @media screen and (min-width: 1024px) and (max-width: 1439px) {
+        font-size: 40px;
+        line-height: 48px;
+    }
 }
 @mixin H5Semibold{
     font-family: Inter Tight;
     font-size: 24px;
     line-height: 32px;
     font-weight: 600;
+    @media screen and (min-width: 1024px) and (max-width: 1439px) {
+        font-size: 20px;
+        line-height: 28px;
+    }
 }
 @mixin H5Medium{
     font-family: Inter Tight;
     font-size: 24px;
     line-height: 32px;
     font-weight: 500;
+    @media screen and (min-width: 1024px) and (max-width: 1439px) {
+        font-size: 20px;
+        line-height: 28px;
+    }
 }
 @mixin H4Semibold{
     font-family: Inter Tight;
     font-size: 32px;
     line-height: 40px;
     font-weight: 600;
+    @media screen and (min-width: 1024px) and (max-width: 1439px) {
+        font-size: 28px;
+        line-height: 32px;
+    }
 }
 @mixin H1Bold{
     font-family: Inter Tight;
     font-size: 64px;
     line-height: 72px;
     font-weight: 800;
+    @media screen and (min-width: 1024px) and (max-width: 1439px) {
+        font-size: 56px;
+        line-height: 64px;
+    }
 }
 @mixin H2Bold{
     font-family: Inter Tight;
     font-size: 48px;
     line-height: 56px;
     font-weight: 800;
+    @media screen and (min-width: 1024px) and (max-width: 1439px) {
+        font-size: 40px;
+        line-height: 48px;
+    }
 }
 @mixin H6Regular{
     font-family: Inter Tight;
     font-size: 18px;
     line-height: 26px;
     font-weight: 400;
+    @media screen and (min-width: 1024px) and (max-width: 1439px) {
+        font-size: 14px;
+        line-height: 20px;
+    }
 }
 @mixin BodySmallRegular{
     font-family: Inter Tight;
     font-size: 12px;
     line-height: 16px;
     font-weight: 400;
+    @media screen and (min-width: 1024px) and (max-width: 1439px) {
+        font-size: 10px;
+        line-height: 14px;
+    }
 }
 @mixin BodyMediumRegular{
     font-family: Inter Tight;
     font-size: 14px;
     line-height: 20px;
     font-weight: 400;
+    @media screen and (min-width: 1024px) and (max-width: 1439px) {
+        font-size: 12px;
+        line-height: 16px;
+    }
 }
 @mixin H6Medium{
     font-family: Inter Tight;
     font-size: 18px;
     line-height: 26px;
     font-weight: 500;
+    @media screen and (min-width: 1024px) and (max-width: 1439px) {
+        font-size: 14px;
+        line-height: 20px;
+    }
 }

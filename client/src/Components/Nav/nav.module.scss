@@ -43,3 +43,26 @@
             }
         }
     }
+
+    @media screen and (max-width: 1439px) and (min-width: 1024px) {
+        .nav{
+            width: 900px;
+            height: 36px;
+            margin-top: 30px;
+            .nav_left{
+                width: 504px;
+                height: 32px;
+                .links{
+                    width: 298px;
+                    height: 20px;
+                }
+            }
+            .nav_right{
+                button{
+                    width: 156px;
+                    height: 36px;
+                    border-radius: 8px;
+                }
+            }
+        }
+    }

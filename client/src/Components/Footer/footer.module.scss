@@ -152,3 +152,91 @@
         }
     }
 }
+
+@media screen and (max-width: 1439px) and (min-width: 1024px){
+    .footer{
+        width: 100%;
+        height: 440px;
+        .con{
+            width: 1024px;
+            height: 400px;
+            padding: 24px;
+            box-sizing: border-box;
+            padding-left: 40px;
+            padding-right: 40px;
+            border-radius: 12px;
+            .left{
+                width: 356px;
+                height: 360px;
+                .top{
+                    width: 255px;
+                    height: 104px;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .mid{
+                    width: 300px;
+                    height: 106px;
+                    .email{
+                        width: 300px;
+                        height: 44px;
+                        border: 1px white solid;
+                        border-radius: 8px;
+                        padding: 12px;
+                        padding-left: 24px;
+                        padding-right: 24px;
+                        input{
+                            height: 24px;
+                            width: 260px;
+                        }
+                    }
+                }
+                .bot{
+                    width: 228px;
+                    height: 48px;
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+            .right{
+                width: 570px;
+                height: 360px;
+                .social{
+                    width: 200px;
+                    height: 48px;
+                    a{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 8px;
+                        img{
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+                }
+                .lists{
+                    width: 570px;
+                    height: 202px;
+                    ul{
+                        width: 150px;
+                        height: 202px;
+                        p{
+                            font-size: 20px;
+                            line-height: 28px;
+                        }
+                        li{
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+                .things{
+                    width: 452px;
+                    height: 24px;
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}

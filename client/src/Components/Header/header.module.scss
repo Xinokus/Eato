@@ -140,3 +140,78 @@
         }
     }
 }
+
+@media screen and (max-width: 1439px) and (min-width: 1024px){
+    .header{
+        width: 100%;
+        height: 600px;
+        .circle_one{
+            transform: translate(605px, -95px);
+        }
+        .circle_two{
+            transform: translate(-605px, 456px);
+        }
+        .highlight{
+            transform: translate(-405px, -235px);
+            filter: blur(576px);
+        }
+        .title{
+            width: 1024px;
+            height: 144px;
+            margin-top: 42px;
+        }
+        .image{
+            width: 650px;
+            height: 400px;
+            margin-top: 6px;
+            img{
+                width: 650px;
+                height: 400px;
+            }
+        }
+        .quality{
+            width: 140px;
+            height: 120px;
+            padding: 14px;
+            border-radius: 12px;
+            transform: translate(-345px,316px);
+            box-shadow: 0px 4px 20px 0px rgb(0, 0, 0, 0.12);
+            .img{
+                width: 52px;
+                height: 52px;
+                border-radius: 12px;
+                box-shadow: inset 0 4px 4px 0 rgb(0, 0, 0, 0.25), 0 4px 4px 0 rgb(0, 0, 0, 0.25);
+            }
+            .text{
+                height: 36px;
+            }
+        }
+        .explore{
+            width: 379px;
+            height: 80px;
+            transform: translate(380px, 341px);
+            button{
+                width: 130px;
+                height: 36px;
+                border-radius: 8px;
+            }
+            button:nth-of-type(2){
+                margin-left: 12px;
+            }
+        }
+        .michelin{
+            width: 127px;
+            height: 80px;
+            border-radius: 12px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 12px;
+            padding-right: 12px;
+            transform: translate(325px, 475px);
+            box-shadow: 0px 4px 20px 0px rgb(0, 0, 0, 0.12);
+            >div{
+                width: 103px;
+            }
+        }
+    }
+}

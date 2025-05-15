@@ -112,3 +112,60 @@
         }
     }
 }
+@media screen and (max-width: 1439px) and (min-width: 1024px){
+    .sect_four{
+        width: 100%;
+        height: 1000px;
+        .con{
+            width: 1024px;
+            height: 600px;
+            margin-top: 120px;
+            .quote{
+                font-size: 244px;
+                line-height: 244px;
+                &:nth-of-type(1){
+                    transform: translate(-600px, -70px);
+                }
+                &:nth-of-type(2){
+                    transform: translate(600px, 110px);
+                }
+            }
+            .title{
+                width: 1024px;
+                height: 160px;
+            }
+            .slider{
+                width: 355px;
+                height: 400px;
+                position: relative;
+                top: 60px;
+                .top{
+                    width: 355px;
+                    height: 392px;
+                    .images{
+                        width: 355px;
+                        height: 346px;
+                    }
+                    .text{
+                        width: 355px;
+                        height: 392px;
+                    }
+                }
+                .directions{
+                    width: 104px;
+                    height: 48px;
+                    margin-top: 10px;
+                    div{
+                        width: 48px;
+                        height: 48px;
+                        border-radius: 48px;
+                        border: 1px solid white;
+                    }
+                    div:nth-of-type(1){
+                        rotate: 180deg;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -144,3 +144,90 @@
         }
     }
 }
+@media screen and (max-width: 1439px) and (min-width: 1024px){
+    .faq_section{
+        width: 100%;
+        height: 900px;
+        .con{
+            margin-top: 70px;
+            width: 1360px;
+            height: 920px;
+            align-items: center;
+            .top{
+                width: 1024px;
+                height: 112px;
+                position: relative;
+                left: -30px;
+                .title{
+                    width: 550px;
+                    font-size: 40px;
+                    line-height: 48px;
+                }
+                .desc{
+                    width: 406px;
+                    height: 90px;
+                    p{
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                    button{
+                        width: 130px;
+                        height: 36px;
+                        border-radius: 8px;
+                    }
+                }
+            }
+            .bot{
+                width: 1104px;
+                height: 780px;
+                .faq{
+                    width: 500px;
+                    height: 644px;
+                    margin-top: 32px;
+                    .faq_question{
+                        width: 500px;
+                        height: 48px;
+                        padding-left: 14px;
+                        padding-right: 14px;
+                        border-radius: 12px;
+                        border: white 1px solid;
+                        margin-bottom: 24px;
+                        &.active{
+                            height: 72px;
+                            padding: 14px;
+                            .text{
+                                height: 48px;
+                            }
+                        }
+                        .text{
+                            p:nth-of-type(1){
+                                font-size: 18px;
+                                line-height: 24px;
+                            }
+                            p:nth-of-type(2){
+                                font-size: 12px;
+                                line-height: 18px;
+                            }
+                        }
+                        .arrow{
+                            width: 32px;
+                            height: 32px;
+                            border-radius: 32px;
+                        }
+                        .arrow.active{
+                            img{
+                                transform: translate(0px, -48px);
+                                filter: drop-shadow(0px 48px white);
+                                rotate: 179.9deg;
+                            }
+                        }
+                    }
+                }
+                .image{
+                    width: 560px;
+                    height: 780px;
+                }
+            }
+        }
+    }
+}
