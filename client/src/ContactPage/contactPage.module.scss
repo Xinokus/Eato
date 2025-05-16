@@ -395,3 +395,254 @@
         }
     }
 }
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    .sect_one{
+        width: 100%;
+        height: 900px;
+        .con{
+            margin-top: 0px;
+            width: 1280px;
+            height: 900px;
+            scale: 0.8;
+            .top{
+                width: 800px;
+                height: 104px;
+                scale: 1;
+                p:nth-of-type(2){
+                    width: 492px;
+                }
+            }
+            .middle{
+                width: 482px;
+                height: 387px;
+                img{
+                    width: 482px;
+                    height: 387px;
+                }
+            }
+            .bottom{
+                width: 1280px;
+                height: 326px;
+                .box{
+                    width: 302px;
+                    height: 326px;
+                    padding: 24px;
+                    border-radius: 12px;
+                    .image{
+                        width: 48px;
+                        height: 48px;
+                        border-radius: 8px;
+                    }
+                    .text{
+                        width: 254px;
+                        height: 110px;
+                        p:nth-of-type(1){
+                            font-size: 24px;
+                            line-height: 32px;
+                        }
+                        p:nth-of-type(2){
+                            font-size: 16px;
+                            line-height: 24px;
+                        }
+                        p:nth-of-type(3){
+                            font-size: 18px;
+                            line-height: 26px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sect_two{
+        width: 100%;
+        height: 850px;
+        .con{
+            width: 1440px;
+            height: 1024px;
+            scale: 0.8; 
+            transform: translateY(-100px);
+            .text{
+                width: 550px;
+                height: 164px;
+                margin-top: 80px;
+                p:nth-of-type(2){
+                    width: 492px;
+                }
+            }
+            .map{
+                .pin:nth-of-type(1){
+                    transform: translate(-580px, 150px);
+                }
+                .pin:nth-of-type(2){
+                    transform: translate(-440px, 200px);
+                }
+                .pin:nth-of-type(3){
+                    transform: translate(-280px, 100px);
+                }
+                .pin:nth-of-type(4){
+                    transform: translate(-440px, 350px);
+                }
+                .pin:nth-of-type(5){
+                    transform: translate(-400px, 410px);
+                }
+                .pin:nth-of-type(6){
+                    transform: translate(-40px, 370px);
+                }
+                .pin:nth-of-type(7){
+                    transform: translate(-0px, 300px);
+                }
+                .pin:nth-of-type(8){
+                    transform: translate(-140px, 280px);
+                }
+                .pin:nth-of-type(9){
+                    transform: translate(-10px, 160px);
+                }
+                .pin:nth-of-type(10){
+                    transform: translate(170px, 250px);
+                }
+                .pin:nth-of-type(11){
+                    transform: translate(300px, 180px);
+                }
+                .pin:nth-of-type(12){
+                    transform: translate(340px, 340px);
+                }
+                .pin:nth-of-type(13){
+                    transform: translate(420px, 410px);
+                }
+                .pin.inactive{
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 32px;
+                    div:nth-of-type(1){
+                        transform: translate(29px, 52px);
+                    }
+                }
+                .pin.active{
+                    width: 255px;
+                    height: 137px;
+                    div:nth-of-type(2){
+                        width: 199px;
+                        height: 64px;
+                        padding-top: 12px;
+                        padding-left: 8px;
+                        border-radius: 12px;
+                        font-size: 14px;
+                        line-height: 20px;
+                        transform: translate(55px, -20px);
+                        backdrop-filter: blur(10px);
+                    }
+                }
+            }
+        }
+    }
+    .sect_three{
+        width: 100%;
+        height: 800px;
+        .con{
+            width: 1440px;
+            height: 1024px;
+            scale: 0.7;
+            .left{
+                width: 721px;
+                height: 1024px;
+                img{
+                    width: 721px;
+                    height: 1024px;
+                }
+            }
+            .right{
+                width: 606px;
+                height: 960px;
+                margin-top: 32px;
+                margin-right: 80px;
+                position: relative;
+                left: 40px;
+                .main_part{
+                    width: 606px;
+                    height: 887px;
+                    .title{
+                        width: 606px;
+                        height: 124px;
+                        p:nth-of-type(2){
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                    }
+                    .form{
+                        width: 606px;
+                        height: 667px;
+                        .inputs{
+                            width: 606px;
+                            height: 575px;
+                            .name{
+                                width: 606px;
+                                height: 118px;
+                            }
+                            .first, .last{
+                                width: 296px;
+                                height: 118px;
+                                input{
+                                    width: 296px;
+                                    height: 74px;
+                                }
+                            }
+                            .email{
+                                width: 606px;
+                                height: 118px;
+                                input{
+                                    width: 606px;
+                                    height: 74px;
+                                }
+                            }
+                            .comment{
+                                width: 606px;
+                                height: 291px;
+                                textarea{
+                                    width: 606px;
+                                    height: 247px;
+                                }
+                            }
+                            .first, .last, .email, .comment{
+                                label{
+                                    font-size: 24px;
+                                    line-height: 32px;
+                                }
+                                input, textarea{
+                                    font-size: 18px;
+                                    line-height: 26px;
+                                    padding: 24px;
+                                    background-color: rgb(255, 255, 255, 0.24);
+                                    border: 1px solid white;
+                                    border-radius: 12px;
+                                }
+                                
+                            }
+                        }
+                        .button{
+                            button{
+                                width: 606px;
+                                height: 52px;
+                                border-radius: 12px;
+                                font-size: 16px;
+                                line-height: 24px;
+                            }
+                        }
+                    }
+                    .terms{
+                        width: 606px;
+                        height: 16px;
+                        font-size: 12px;
+                        line-height: 16px;
+                    }
+                }
+                .rights{
+                    width: 606px;
+                    height: 24px;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}

@@ -344,3 +344,27 @@
         }
     }
 }
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    .sect_one{
+        height: 850px;
+        .con{
+            scale: 0.75;
+        }
+    }
+    .sect_two{
+        height: 750px;
+        .con{
+            scale: 0.8;
+        }
+    }
+    .sect_three{
+        height: 700px;
+        .con{
+            scale: 0.75;
+            .top{
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

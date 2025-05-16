@@ -416,3 +416,18 @@
         }
     }
 }
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    .sect_one{
+        height: 1100px;
+        .con{
+            scale: 0.8;
+        }
+    }
+    .sect_two{
+        height: 432px;
+        .con{
+            scale: 0.75;
+        }
+    }
+}

@@ -410,3 +410,127 @@
         }
     }
 }
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    .sect_one{
+        height: 660px;
+        .con{
+            scale: 0.75;
+        }
+    }
+    .sect_two{
+        height: 740px;
+        .con{
+            scale: 0.75;
+        }
+    }
+    .sect_three{
+        width: 100%;
+        height: 800px;
+        .con{
+            width: 1440px;
+            height: 1024px;
+            scale: 0.7;
+            .left{
+                width: 721px;
+                height: 1024px;
+                img{
+                    width: 721px;
+                    height: 1024px;
+                }
+            }
+            .right{
+                width: 606px;
+                height: 960px;
+                margin-top: 32px;
+                margin-right: 80px;
+                position: relative;
+                left: 40px;
+                .main_part{
+                    width: 606px;
+                    height: 887px;
+                    .title{
+                        width: 606px;
+                        height: 124px;
+                        p:nth-of-type(2){
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                    }
+                    .form{
+                        width: 606px;
+                        height: 667px;
+                        .inputs{
+                            width: 606px;
+                            height: 575px;
+                            .name{
+                                width: 606px;
+                                height: 118px;
+                            }
+                            .first, .last{
+                                width: 296px;
+                                height: 118px;
+                                input{
+                                    width: 296px;
+                                    height: 74px;
+                                }
+                            }
+                            .email{
+                                width: 606px;
+                                height: 118px;
+                                input{
+                                    width: 606px;
+                                    height: 74px;
+                                }
+                            }
+                            .comment{
+                                width: 606px;
+                                height: 291px;
+                                textarea{
+                                    width: 606px;
+                                    height: 247px;
+                                }
+                            }
+                            .first, .last, .email, .comment{
+                                label{
+                                    font-size: 24px;
+                                    line-height: 32px;
+                                }
+                                input, textarea{
+                                    font-size: 18px;
+                                    line-height: 26px;
+                                    padding: 24px;
+                                    background-color: rgb(255, 255, 255, 0.24);
+                                    border: 1px solid white;
+                                    border-radius: 12px;
+                                }
+                                
+                            }
+                        }
+                        .button{
+                            button{
+                                width: 606px;
+                                height: 52px;
+                                border-radius: 12px;
+                                font-size: 16px;
+                                line-height: 24px;
+                            }
+                        }
+                    }
+                    .terms{
+                        width: 606px;
+                        height: 16px;
+                        font-size: 12px;
+                        line-height: 16px;
+                    }
+                }
+                .rights{
+                    width: 606px;
+                    height: 24px;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}
