@@ -46,3 +46,23 @@
         height: 500px;
     }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .menu_swiper .swiper-button-prev{
+        transform: translate(840px, -300px);
+    }
+    .menu_swiper .swiper-button-next, .menu_swiper .swiper-button-prev{
+        width: 48px;
+        height: 48px;
+        border-radius: 48px;
+    }
+    .menu_swiper .swiper-button-next{
+        transform: translate(0px, -300px);
+    }
+    .menu_swiper .swiper-slide{
+        height: 500px;
+    }
+    .menu_swiper .swiper-wrapper{
+        height: 616px;
+    }
+}

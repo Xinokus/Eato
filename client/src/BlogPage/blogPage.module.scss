@@ -507,3 +507,36 @@
         }
     }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .sect_one{
+        .con{
+            width: 700px;
+            .top{
+                scale: 0.8;
+            }
+            .bot{
+                width: 700px;
+                justify-content: center;
+                .left{
+                    display: none;
+                }
+            }
+        }
+    }
+    .sect_two{
+        height: 600px;
+        .con{
+            scale: 0.9;
+            .right{
+                display: none;
+            }
+        }
+    }
+    .sect_three{
+        height: 700px;
+        .con{
+            scale: 0.55;
+        }
+    }
+}
