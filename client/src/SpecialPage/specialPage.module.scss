@@ -194,3 +194,24 @@
         }
     }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .sect_one{
+        height: 650px;
+        .con{
+            scale: 0.9;
+            .right{
+                margin-left: 30px;
+            }
+            .left{
+                display: none;
+            }
+        }
+    }
+    .sect_two{
+        height: 316.8px;
+        .con{
+            scale: 0.55;
+        }
+    }
+}

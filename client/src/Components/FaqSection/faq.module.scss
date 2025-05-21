@@ -231,3 +231,31 @@
         }
     }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .faq_section{
+        height: 950px;
+        .con{
+            width: 700px;
+            height: 900px;
+            margin-top: 20px;
+            .top{
+                height: 220px;
+                width: 700px;
+                scale: 0.8;
+                transform: translateX(-85px);
+                flex-direction: column;
+                align-items: start;
+                .title{
+                    width: 700px;
+                }
+            }
+            .bot{
+                width: 700px;
+                height: 670px;
+                .image{
+                    display: none;
+                }
+            }
+        }
+    }
+}
