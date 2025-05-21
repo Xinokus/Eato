@@ -13,6 +13,7 @@ import EventsPage from './EventsPage/eventsPage'
 import GalleryPage from './GalleryPage/galleryPage'
 import ReviewPage from './ReviewPage/reviewPage'
 import ReservationPage from './ReservatonPage/reservationPage'
+import AdminPage from './AdminPage/adminPage'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -30,6 +31,7 @@ createRoot(document.getElementById('root')).render(
         <Route path='/special' element={<SpecialPage/>}/>
         <Route path='/faq' element={<FaqPage/>}/>
         <Route path='/contact' element={<ContactPage/>}/>
+        <Route path='/admin' element={<AdminPage/>}/>
       </Routes>
     </BrowserRouter>
   </StrictMode>,
