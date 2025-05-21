@@ -66,3 +66,44 @@
             }
         }
     }
+    @media screen and (max-width: 1023px) and (min-width: 768px) {
+        .nav{
+            width: 700px;
+            height: 36px;
+            margin-top: 30px;
+            .nav_left{
+                width: 474px;
+                height: 32px;
+                .links{
+                    width: 298px;
+                    height: 20px;
+                }
+            }
+            .nav_right{
+                button{
+                    width: 156px;
+                    height: 36px;
+                    border-radius: 8px;
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 425px) and (max-width: 767px) {
+        .nav{
+            width: 400px;
+            height: 100px;
+            margin-top: 0px;
+            .nav_left{
+                width: 240px;
+                .links{
+                    flex-direction: column;
+                    height: 80px;
+                }
+            }
+            .nav_right{
+                button{
+                    scale: 0.8;
+                }
+            }
+        }
+    }

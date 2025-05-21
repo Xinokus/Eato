@@ -1721,3 +1721,222 @@ html, body{
         }
     }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .header{
+        height: 850px;
+        .con{
+            width: 700px;
+            height: 650px;
+            left: 0px;
+            .left{
+                height: 650px;
+                .images{
+                    width: 240px;
+                    >img:nth-of-type(2){
+                        display: none;
+                    }
+                    .review{
+                        transform: translate(270px);
+                    }
+                }
+            }
+            .right{
+                display: none;
+            }
+        }
+    }
+    .sect_one{
+        height: 700px;
+        .middle{
+            .percent{
+                transform: translate(-200px, -351px);
+            }
+        }
+        .con{
+            scale: 0.72;
+
+        }
+    }
+    .sect_two{
+        height: 600px;
+        .con{
+            scale: 0.72;
+            height: 600px;
+            width: 970px;
+            transform: translateY(-30px);
+            .menu_swiper{
+                width: 970px;
+                height: 700px;
+                .swiper_slide{
+                    width: 224px;
+                    .image{
+                        width: 224px;
+                        height: 400px;
+                        img{
+                            width: 224px;
+                            height: 400px;
+                        }
+                    }
+                    .info{
+                        scale: 0.74;
+                        transform: translateX(-50px);
+                    }
+                }
+            }
+        }
+    }
+    .sect_three{
+        height: 600px;
+        .back{
+            scale: 0.6;
+            transform: translateY(150px);
+        }
+        .con{
+            scale: 0.73;
+            width: 1000px;
+            height: 850px;
+            transform: translateY(200px);
+            .bot{
+                width: 1000px;
+                .middle{
+                    width: 300px;
+                    height: 500px;
+                }
+                .side{
+                    .box{
+                        scale: 0.9;
+                    }
+                }
+            }
+        }
+    }
+    .sect_four{
+        height: 680px;
+        .con{
+            margin-top: -20px;
+            scale: 0.8;
+            width: 900px;
+            height: 700px;
+            .chefs_swiper{
+                width: 100%;
+                height: 380px;
+                .swiper_slide{
+                    width: 200px;
+                    height: 380px;
+    
+                    .image{
+                            width: 230px;
+                            height: 300px;
+                        img{
+                            width: 230px;
+                            height: 300px;
+                        }
+                    }
+                    .info{
+                        width: 100%;
+                        height: 60px;
+                    }
+                }
+            }
+        }
+    }
+    .sect_six{
+        .con{
+            width: 700px;
+            .top{
+                scale: 0.8;
+            }
+            .bot{
+                width: 700px;
+                justify-content: center;
+                .left{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 425px) and (max-width: 767px) {
+    .header{
+        height: 600px;
+        .con{
+            width: 400px;
+            height: 400px;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .right{
+                display: none;
+            }
+            .left{
+                scale: 0.55;
+                .images{
+                    width: 240px;
+                    >img:nth-of-type(2){
+                        display: none;
+                    }
+                    .review{
+                        transform: translate(270px);
+                    }
+                }
+                .text{
+                    .main_text{
+                        p:nth-of-type(2){
+                            font-size: 20px;
+                            line-height: 24px;
+                        }
+                    }
+                    .buttons{
+                        button{
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sect_one{
+        height: 400px;
+        .middle{
+            .percent{
+                transform: translate(-200px, -351px);
+            }
+        }
+        .con{
+            scale: 0.40;
+        }
+        .desc{
+            font-size: 24px;
+        }
+    }
+    .sect_two{
+        height: 600px;
+        .con{
+            scale: 0.4;
+            height: 600px;
+            width: 970px;
+            transform: translateY(-30px);
+            .menu_swiper{
+                width: 970px;
+                height: 700px;
+                .swiper_slide{
+                    width: 224px;
+                    .image{
+                        width: 224px;
+                        height: 400px;
+                        img{
+                            width: 224px;
+                            height: 400px;
+                        }
+                    }
+                    .info{
+                        scale: 0.74;
+                        transform: translateX(-50px);
+                    }
+                }
+            }
+        }
+    }   
+}
