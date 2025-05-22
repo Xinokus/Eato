@@ -6,6 +6,7 @@ const cors = require('cors')
 const bcrypt = require('bcrypt')
 const uuid = require('uuid')
 const path = require('path')
+const jwt = require('jsonwebtoken')
 const fileUpload = require('express-fileupload')
 
 const app = express()
@@ -14,6 +15,10 @@ app.use(express.json())
 app.use(fileUpload())
 app.use(express.static(path.resolve(__dirname, './static')))
 app.use(express.urlencoded({ extended: true }));
+
+const generateJwt = (id, email, role, username)=>{
+    return jwt.sign({id, email, role, username}, 'fuckingfuck', {expiresIn: '24h'})
+}
 
 function User(){
     app.get('/users', (req, res) => {
@@ -27,12 +32,47 @@ function User(){
     app.post('/users/create', (req, res) => {
         async function create(){
             const {username, password, email} = req.body
+            const candidate = await models.User.findOne({where: {email}})
+            if(candidate){
+                return res.status(500).json('err')
+            }
             const newPassword = password.toString()
             const hashPassword = await bcrypt.hash(newPassword, 5)
-            const createUser = await models.User.create({username, password: hashPassword, email})
-            return res.json(createUser)
+            const user = await models.User.create({username, password: hashPassword, email, role: 'USER'})
+            const token = generateJwt(user.id, user.email, user.role, user.username)
+            return res.json({token})
         }
         create()
+    })
+
+    app.post('/users/login', (req, res) => {
+        async function login(){
+            const {password, email} = req.body
+            const user = await models.User.findOne({where: {email}})
+            const compare = bcrypt.compareSync(password, user.password)
+            if(!compare){
+                return res.status(500).json('err')
+            }
+            const token = generateJwt(user.id, user.email, user.role, user.username)
+            return res.json(token)
+        }
+        login()
+    })
+
+    app.post('/users/registration', (req, res) => {
+        async function registration(){
+            const {username, password, email} = req.body
+            const candidate = await models.User.findOne({where: {email}})
+            if(candidate){
+                return res.status(500).json('err')
+            }
+            const newPassword = password.toString()
+            const hashPassword = await bcrypt.hash(newPassword, 5)
+            const user = await models.User.create({username, password: hashPassword, email, role: 'USER'})
+            const token = generateJwt(user.id, user.email, user.role, user.username)
+            return res.json(token)
+        }
+        registration()
     })
 
     app.post('/users/edit', (req, res) => {
@@ -248,6 +288,9 @@ function Product(){
             if(product){
                 return res.status(500).json('err')
             }
+            if(categoryId == -1){
+                return res.status(500).json('err')
+            }
             let imageName = uuid.v4() + '.png'
             img.mv(path.resolve(__dirname, './static/img', imageName))
             const createProduct = await models.Product.create({img: imageName, name, desc, rating, price, categoryId})
@@ -259,6 +302,9 @@ function Product(){
         async function edit() {
             const {id, name, desc, rating, price, categoryId} = req.body
             const {img} = req.files
+            if(categoryId == -1){
+                return res.status(500).json('err')
+            }
             let imageName = uuid.v4() + '.png'
             img.mv(path.resolve(__dirname, './static/img', imageName))
             const editProduct = await models.Product.update({name, desc, rating, price, categoryId, img: imageName}, {where: {id}})

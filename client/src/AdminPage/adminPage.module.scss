@@ -11,4 +11,16 @@
         width: 1280px;
         height: 900px;
     }
+    form{
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        input{
+            width: 200px;
+        }
+    }
+    label{
+        width: 100px;
+        display: flex;
+    }
 }

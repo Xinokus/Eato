@@ -14,6 +14,8 @@ import GalleryPage from './GalleryPage/galleryPage'
 import ReviewPage from './ReviewPage/reviewPage'
 import ReservationPage from './ReservatonPage/reservationPage'
 import AdminPage from './AdminPage/adminPage'
+import AccountPage from './AccountPage/accountPage'
+import AuthPage from './AuthPage/authPage'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -32,6 +34,8 @@ createRoot(document.getElementById('root')).render(
         <Route path='/faq' element={<FaqPage/>}/>
         <Route path='/contact' element={<ContactPage/>}/>
         <Route path='/admin' element={<AdminPage/>}/>
+        <Route path='/account' element={<AccountPage/>}/>
+        <Route path='/auth' element={<AuthPage/>}/>
       </Routes>
     </BrowserRouter>
   </StrictMode>,
