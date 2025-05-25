@@ -45,7 +45,7 @@
             width: 650px;
             height: 565px;
             position: relative;
-            background-color: gainsboro;
+            // background-color: gainsboro;
             z-index: 1;
         }
     }
@@ -116,7 +116,7 @@
     }
     .michelin{
         position: absolute;
-        width: 127px;
+        width: 135px;
         height: 80px;
         display: flex;
         justify-content: space-between;
@@ -134,7 +134,7 @@
         z-index: 1;
         box-shadow: 0px 4px 20px 0px rgb(0, 0, 0, 0.12);
         >div{
-            width: 103px;
+            width: 110px;
             display: flex;
             justify-content: space-between;
         }

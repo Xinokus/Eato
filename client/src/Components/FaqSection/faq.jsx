@@ -4,6 +4,8 @@ import SectSevenFaq from "./openable/faq"
 
 import classes from './faq.module.scss'
 
+import image from '../../../static/img/Spagetti Carbonara.png'
+
 export default function Faq(){
         const [sectSevenFaqActive, setSectSevenFaqActive] = useState(1)
 
@@ -67,7 +69,7 @@ export default function Faq(){
                                                             />
                                                         </div>
                                                         <div className={classes.image}>
-                                                            <img src="" alt="" />
+                                                            <img src={image} alt="" />
                                                         </div>
                                                     </div>
                                                 </div>

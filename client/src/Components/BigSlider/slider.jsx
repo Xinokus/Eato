@@ -7,6 +7,12 @@ import red_highlight from './img/red_highlight.png'
 
 import SliderValues from './SliderValues/slider_values'
 
+import SliderFood1 from '../../../static/img/SliderFood1.jpg'
+import SliderFood2 from '../../../static/img/SliderFood2.jpg'
+import SliderFood3 from '../../../static/img/SliderFood3.jpg'
+import SliderFood4 from '../../../static/img/SliderFood4.jpg'
+import SliderFood5 from '../../../static/img/SliderFood5.jpg'
+
 export default function BigSlider(){
 
     const [sectFiveImageOne, setSectFiveImageOne] = useState(0)
@@ -109,7 +115,7 @@ export default function BigSlider(){
                                 </div>
                             </div>
                             <div className={classes.images}>
-                                <img src="" alt="" style={{
+                                <img src={SliderFood1} alt="" style={{
                                     width: SliderValues[sectFiveImageOne].width,
                                     height: SliderValues[sectFiveImageOne].height,
                                     rotate: SliderValues[sectFiveImageOne].rotation,
@@ -117,7 +123,7 @@ export default function BigSlider(){
                                     left: SliderValues[sectFiveImageOne].position,
                                     bottom: SliderValues[sectFiveImageOne].y,
                                 }}/>
-                                <img src="" alt="" style={{
+                                <img src={SliderFood2} alt="" style={{
                                     width: SliderValues[sectFiveImageTwo].width,
                                     height: SliderValues[sectFiveImageTwo].height,
                                     rotate: SliderValues[sectFiveImageTwo].rotation,
@@ -125,7 +131,7 @@ export default function BigSlider(){
                                     left: SliderValues[sectFiveImageTwo].position,
                                     bottom: SliderValues[sectFiveImageTwo].y,
                                 }}/>
-                                <img src="" alt="" style={{
+                                <img src={SliderFood3} alt="" style={{
                                     width: SliderValues[sectFiveImageThree].width,
                                     height: SliderValues[sectFiveImageThree].height,
                                     rotate: SliderValues[sectFiveImageThree].rotation,
@@ -133,7 +139,7 @@ export default function BigSlider(){
                                     left: SliderValues[sectFiveImageThree].position,
                                     bottom: SliderValues[sectFiveImageThree].y,
                                 }}/>
-                                <img src="" alt="" style={{
+                                <img src={SliderFood4} alt="" style={{
                                     width: SliderValues[sectFiveImageFour].width,
                                     height: SliderValues[sectFiveImageFour].height,
                                     rotate: SliderValues[sectFiveImageFour].rotation,
@@ -141,7 +147,7 @@ export default function BigSlider(){
                                     left: SliderValues[sectFiveImageFour].position,
                                     bottom: SliderValues[sectFiveImageFour].y,
                                 }}/>
-                                <img src="" alt="" style={{
+                                <img src={SliderFood5} alt="" style={{
                                     width: SliderValues[sectFiveImageFive].width,
                                     height: SliderValues[sectFiveImageFive].height,
                                     rotate: SliderValues[sectFiveImageFive].rotation,

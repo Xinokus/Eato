@@ -4,6 +4,10 @@ import { useState } from 'react'
 import SectEightArrow from './img/sect_four_arrow.png'
 import SectEightSliderValues from './sliderValues/slider_values.js'
 
+import ethan from '../../../static/img/Ethan Carbonara.jpg'
+import sarah from '../../../static/img/Sarah Hamilton.jpg'
+import olivia from '../../../static/img/Olivia Marathon.jpg'
+
 export default function Slider(){
     const [sectEightImageOne, setSectEightImageOne] = useState(0)
     const [sectEightImageTwo, setSectEightImageTwo] = useState(1)
@@ -71,21 +75,21 @@ export default function Slider(){
                         <div className={classes.slider}>
                             <div className={classes.top}>
                                 <div className={classes.images}>
-                                    <img src="" alt="" style={{
+                                    <img src={ethan} alt="" style={{
                                         width: SectEightSliderValues[sectEightImageOne].width,
                                         height: SectEightSliderValues[sectEightImageOne].height,
                                         zIndex: SectEightSliderValues[sectEightImageOne].index,
                                         left: SectEightSliderValues[sectEightImageOne].x,
                                         rotate: SectEightSliderValues[sectEightImageOne].rotation,
                                     }}/>
-                                    <img src="" alt="" style={{
+                                    <img src={sarah} alt="" style={{
                                         width: SectEightSliderValues[sectEightImageTwo].width,
                                         height: SectEightSliderValues[sectEightImageTwo].height,
                                         zIndex: SectEightSliderValues[sectEightImageTwo].index,
                                         left: SectEightSliderValues[sectEightImageTwo].x,
                                         rotate: SectEightSliderValues[sectEightImageTwo].rotation,
                                     }}/>
-                                    <img src="" alt="" style={{
+                                    <img src={olivia} alt="" style={{
                                         width: SectEightSliderValues[sectEightImageThree].width,
                                         height: SectEightSliderValues[sectEightImageThree].height,
                                         zIndex: SectEightSliderValues[sectEightImageThree].index,
@@ -98,11 +102,11 @@ export default function Slider(){
                                 </div>
                             </div>
                             <div className={classes.directions}>
-                                <div>
-                                    <img src={SectEightArrow} alt="" onClick={SectEightSliderPrev} />
+                                <div onClick={SectEightSliderPrev} >
+                                    <img src={SectEightArrow} alt=""/>
                                 </div>
-                                <div>
-                                    <img src={SectEightArrow} alt="" onClick={SectEightSliderNext} />
+                                <div onClick={SectEightSliderNext} >
+                                    <img src={SectEightArrow} alt=""/>
                                 </div>
                             </div>
                         </div>

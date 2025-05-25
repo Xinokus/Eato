@@ -15,15 +15,64 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 import red_highlight from './img/red_highlight.png'
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Dish from "./dishes/dish"
 
 import Footer from "../Components/Footer/footer"
+import axios from "axios"
 
 export default function MenuPage(){
     const [selectedTag, setSelectedTag] = useState(1)
 
-    return(
+    const [data, setData] = useState([])
+
+    useEffect(()=>{
+        let body = new FormData()
+        body.append('categoryId', selectedTag)
+
+        axios({
+            method: 'POST',
+            url: 'http://localhost:5000/product/byCategory',
+            data: body,
+            headers: {'Content-Type': "application/x-www-form-urlencoded"}
+        })
+        .then(function (response) {
+            console.log(response.data)
+            setData(response.data)
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+    }, [])
+
+    useEffect(()=>{
+        console.log(selectedTag)
+        showProducts()
+    },[selectedTag])
+
+    function changeTag(number){
+        setSelectedTag(number)
+    }
+    function showProducts(){
+        let body = new FormData()
+        body.append('categoryId', selectedTag)
+
+        axios({
+            method: 'POST',
+            url: 'http://localhost:5000/product/byCategory',
+            data: body,
+            headers: {'Content-Type': "application/x-www-form-urlencoded"}
+        })
+        .then(function (response) {
+            console.log(response.data)
+            setData(response.data)
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+    }
+
+    if(data[0] != undefined){return(
         <>
             <Header color={'yellow'} title_top={'Discover, Select, Enjoy – Your'} title_bot={'Perfect Choice Awaits'}/>
             <main className={classes.main}>
@@ -46,6 +95,7 @@ export default function MenuPage(){
                         >
                                 <SwiperSlide>
                                     <Dish
+                                        img={'../../static/img/Truffle-infused Wagyu Delight.jpg'}
                                         title={'Truffle-infused Wagyu Delight'}
                                         desc={'Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.'}
                                         rating={5}
@@ -54,6 +104,7 @@ export default function MenuPage(){
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <Dish
+                                        img={'../../static/img/Ocean Symphony Risotto.jpg'}
                                         title={'Ocean Symphony Risotto'}
                                         desc={'Creamy saffron-infused risotto with fresh lobster, scallops, and prawns, finished with parmesan and herbs'}
                                         rating={4}
@@ -62,6 +113,7 @@ export default function MenuPage(){
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <Dish
+                                        img={'../../static/img/Golden Crispy Duck Confit.jpg'}
                                         title={'Golden Crispy Duck Confit'}
                                         desc={'Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.'}
                                         rating={4}
@@ -70,6 +122,7 @@ export default function MenuPage(){
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <Dish
+                                        img={'../../static/img/Velvet Chocolate Lava Cake.jpg'}
                                         title={'Velvet Chocolate Lava Cake'}
                                         desc={'Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.'}
                                         rating={5}
@@ -78,6 +131,7 @@ export default function MenuPage(){
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <Dish
+                                    img={'../../static/img/Truffle-infused Wagyu Delight.jpg'}
                                         title={'Truffle-infused Wagyu Delight'}
                                         desc={'Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.'}
                                         rating={5}
@@ -95,8 +149,8 @@ export default function MenuPage(){
                                 <p>Explore our menu filled with mouthwatering dishes, crafted with passion and the freshest ingredients to satisfy every craving</p>
                             </div>
                             <div className={classes.tags}>
-                                <p className={selectedTag == 1 ? classes.active : null} onClick={()=>setSelectedTag(1)}>Appetizers</p>
-                                <p className={selectedTag == 2 ? classes.active : null} onClick={()=>setSelectedTag(2)}>Soups & Salads</p>
+                                <p className={selectedTag == 1 ? classes.active : null} onClick={()=>changeTag(1)}>Appetizers</p>
+                                <p className={selectedTag == 2 ? classes.active : null} onClick={()=>changeTag(2)}>Soups & Salads</p>
                                 <p className={selectedTag == 3 ? classes.active : null} onClick={()=>setSelectedTag(3)}>Main Course</p>
                                 <p className={selectedTag == 4 ? classes.active : null} onClick={()=>setSelectedTag(4)}>Side Dishes</p>
                                 <p className={selectedTag == 5 ? classes.active : null} onClick={()=>setSelectedTag(5)}>Desserts</p>
@@ -109,18 +163,44 @@ export default function MenuPage(){
                             </div>
                             <div className={classes.line}>
                                 <Dish
+                                    img={'../../static/img/' + data[1].img}
+                                    title={data[0].name}
+                                    desc={data[0].desc}
+                                    rating={data[0].rating}
+                                    price={data[0].price}
+                                />
+                                <Dish
+                                    img={'../../static/img/' + data[1].img}
+                                    title={data[1].name}
+                                    desc={data[1].desc}
+                                    rating={data[1].rating}
+                                    price={data[1].price}
+                                />
+                                <Dish
+                                    img={'../../static/img/' + data[2].img}
+                                    title={data[2].name}
+                                    desc={data[2].desc}
+                                    rating={data[2].rating}
+                                    price={data[2].price}
+                                />
+                            </div>
+                            <div className={classes.line}>
+                                <Dish
+                                img={'../../static/img/Truffle-infused Wagyu Delight.jpg'}
                                     title={'Truffle-infused Wagyu Delight'}
                                     desc={'Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.'}
                                     rating={5}
                                     price={'12,00'}
                                 />
                                 <Dish
+                                img={'../../static/img/Truffle-infused Wagyu Delight.jpg'}
                                     title={'Truffle-infused Wagyu Delight'}
                                     desc={'Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.'}
                                     rating={5}
                                     price={'12,00'}
                                 />
                                 <Dish
+                                img={'../../static/img/Truffle-infused Wagyu Delight.jpg'}
                                     title={'Truffle-infused Wagyu Delight'}
                                     desc={'Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.'}
                                     rating={5}
@@ -129,38 +209,21 @@ export default function MenuPage(){
                             </div>
                             <div className={classes.line}>
                                 <Dish
+                                img={'../../static/img/Truffle-infused Wagyu Delight.jpg'}
                                     title={'Truffle-infused Wagyu Delight'}
                                     desc={'Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.'}
                                     rating={5}
                                     price={'12,00'}
                                 />
                                 <Dish
+                                img={'../../static/img/Truffle-infused Wagyu Delight.jpg'}
                                     title={'Truffle-infused Wagyu Delight'}
                                     desc={'Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.'}
                                     rating={5}
                                     price={'12,00'}
                                 />
                                 <Dish
-                                    title={'Truffle-infused Wagyu Delight'}
-                                    desc={'Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.'}
-                                    rating={5}
-                                    price={'12,00'}
-                                />
-                            </div>
-                            <div className={classes.line}>
-                                <Dish
-                                    title={'Truffle-infused Wagyu Delight'}
-                                    desc={'Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.'}
-                                    rating={5}
-                                    price={'12,00'}
-                                />
-                                <Dish
-                                    title={'Truffle-infused Wagyu Delight'}
-                                    desc={'Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.'}
-                                    rating={5}
-                                    price={'12,00'}
-                                />
-                                <Dish
+                                img={'../../static/img/Truffle-infused Wagyu Delight.jpg'}
                                     title={'Truffle-infused Wagyu Delight'}
                                     desc={'Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.'}
                                     rating={5}
@@ -169,18 +232,21 @@ export default function MenuPage(){
                             </div>
                             <div className={classes.line}>
                                 <Dish
+                                img={'../../static/img/Truffle-infused Wagyu Delight.jpg'}
                                     title={'Truffle-infused Wagyu Delight'}
                                     desc={'Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.'}
                                     rating={5}
                                     price={'12,00'}
                                 />
                                 <Dish
+                                img={'../../static/img/Truffle-infused Wagyu Delight.jpg'}
                                     title={'Truffle-infused Wagyu Delight'}
                                     desc={'Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.'}
                                     rating={5}
                                     price={'12,00'}
                                 />
                                 <Dish
+                                img={'../../static/img/Truffle-infused Wagyu Delight.jpg'}
                                     title={'Truffle-infused Wagyu Delight'}
                                     desc={'Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.'}
                                     rating={5}
@@ -195,5 +261,5 @@ export default function MenuPage(){
             </main>
             <Footer/>
         </>
-    )
+    )}
 }

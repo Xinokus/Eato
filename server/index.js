@@ -207,7 +207,7 @@ function GalleryImage(){
             const {eventId} = req.body
             const {img} = req.files
             let imageName = uuid.v4() + '.png'
-            img.mv(path.resolve(__dirname, './static/img', imageName))
+            img.mv(path.resolve(__dirname, '../client/static/img/', imageName))
             const createImage = await models.GalleryImage.create({img: imageName, eventId})
             return res.json(createImage)
         }
@@ -218,7 +218,7 @@ function GalleryImage(){
             const {id, eventId} = req.body
             const {img} = req.files
             let imageName = uuid.v4() + '.png'
-            img.mv(path.resolve(__dirname, './static/img', imageName))
+            img.mv(path.resolve(__dirname, '../client/static/img/', imageName))
             const editImage = await models.GalleryImage.update({eventId, img: imageName}, {where: {id}})
             return res.json(editImage)
         }
@@ -246,7 +246,7 @@ function News(){
             const {title, desc, time, tagId} = req.body
             const {img} = req.files
             let imageName = uuid.v4() + '.png'
-            img.mv(path.resolve(__dirname, './static/img', imageName))
+            img.mv(path.resolve(__dirname, '../client/static/img/', imageName))
             const createNews = await models.News.create({img: imageName, title, desc, time, tagId})
             return res.json(createNews)
         }
@@ -257,7 +257,7 @@ function News(){
             const {id, title, desc, time, tagId} = req.body
             const {img} = req.files
             let imageName = uuid.v4() + '.png'
-            img.mv(path.resolve(__dirname, './static/img', imageName))
+            img.mv(path.resolve(__dirname, '../client/static/img/', imageName))
             const editNews = await models.News.update({title, desc, time, tagId, img: imageName}, {where: {id}})
             return res.json(editNews)
         }
@@ -280,19 +280,23 @@ function Product(){
         }
         getAll()
     })
+    app.post('/product/byCategory', (req, res) => {
+        async function getByCategory() {
+            const {categoryId} = req.body
+            const product = await models.Product.findAll({where: {categoryId}})
+            return res.json(product)
+        }
+        getByCategory()
+    })
     app.post('/product/create', (req, res) => {
         async function create(){
             const {name, desc, rating, price, categoryId} = req.body
             const {img} = req.files
-            const product = await models.Product.findOne({where: {name}})
-            if(product){
-                return res.status(500).json('err')
-            }
             if(categoryId == -1){
                 return res.status(500).json('err')
             }
             let imageName = uuid.v4() + '.png'
-            img.mv(path.resolve(__dirname, './static/img', imageName))
+            img.mv(path.resolve(__dirname, '../client/static/img/', imageName))
             const createProduct = await models.Product.create({img: imageName, name, desc, rating, price, categoryId})
             return res.json(createProduct)
         }
@@ -306,7 +310,7 @@ function Product(){
                 return res.status(500).json('err')
             }
             let imageName = uuid.v4() + '.png'
-            img.mv(path.resolve(__dirname, './static/img', imageName))
+            img.mv(path.resolve(__dirname, '../client/static/img/', imageName))
             const editProduct = await models.Product.update({name, desc, rating, price, categoryId, img: imageName}, {where: {id}})
             return res.json(editProduct)
         }
@@ -321,7 +325,25 @@ function Product(){
         remove()
     })
 }
+function Reservation(){
+    app.get('/reservations', (req, res) => {
+        async function getAll() {
+            const [reserv, meta] = await sequelize.query('SELECT * FROM xinokus.reservations')
+            return res.json(reserv)
+        }
+        getAll()
+    })
+    app.post('/reservations/create', (req, res) => {
+        async function create() {
+            const {fullName, email, guests, time, date, special, note} = req.body
+            const reservationCreate = models.Reservation.create({fullName, email, guests, time, date, special, note})
+            return res.json(reservationCreate)
+        }
+        create()
+    })
+}
 
+Reservation()
 GalleryImage()
 Tag()
 Event()

@@ -12,7 +12,7 @@ const User = sequelize.define('user', {
 const Product = sequelize.define('product', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
     img: {type: DataTypes.STRING, allowNull: false},
-    name: {type: DataTypes.STRING, unique: true, allowNull: false},
+    name: {type: DataTypes.STRING, allowNull: false},
     desc: {type: DataTypes.STRING, allowNull: false },
     rating: {type: DataTypes.INTEGER, allowNull: false},
     price: {type: DataTypes.INTEGER, allowNull: false},
@@ -49,6 +49,17 @@ const Tag = sequelize.define('tag', {
     name: {type: DataTypes.TEXT, allowNull: false}
 })
 
+const Reservation = sequelize.define('reservation', {
+    id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
+    fullName: {type: DataTypes.TEXT, allowNull: false},
+    email: {type: DataTypes.TEXT, allowNull: false},
+    guests: {type: DataTypes.INTEGER, allowNull: false},
+    time: {type: DataTypes.TIME, allowNull: false},
+    date: {type: DataTypes.TEXT, allowNull: false},
+    special: {type: DataTypes.TEXT},
+    note: {type: DataTypes.TEXT}
+})
+
 Tag.hasMany(News)
 News.belongsTo(Tag)
 
@@ -59,5 +70,5 @@ Category.hasMany(Product)
 Product.belongsTo(Category)
 
 module.exports = {
-    User, Product, Category, GalleryImage, Event, News, Tag
+    User, Product, Category, GalleryImage, Event, News, Tag, Reservation
 }

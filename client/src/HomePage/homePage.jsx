@@ -13,6 +13,15 @@ import star from './img/star.png'
 import circle_red from './img/circle copy.png'
 import circle_yellow from './img/circle_y.png'
 
+import wagu from '../../static/img/Truffle-infused Wagyu Delight.jpg'
+import rizz from '../../static/img/Ocean Symphony Risotto.jpg'
+import kake from '../../static/img/Velvet Chocolate Lava Cake.jpg'
+import dick from '../../static/img/Golden Crispy Duck Confit.jpg'
+import taco from '../../static/img/Taco.jpg'
+import place from '../../static/img/place.png'
+
+import rise from '../../static/img/The rise of plant-based dining.jpg'
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
@@ -32,159 +41,25 @@ import bowl from './img/bowl.png'
 import red_highlight from './img/red_highlight.png'
 import yellow_highlight from './img/yellow_highlight.png'
 import { useState } from 'react'
-
-import SectFiveArrow from './img/sect_five_arrow.png'
-import SliderValues from './sect_five/slider_values'
+import Dish from '../MenuPage/dishes/dish'
 
 import glass from './img/glass.png'
 import SectSixTrend from './sect_six/trend'
-import SectSevenFaq from './sect_seven/faq'
 
-import SectEightArrow from './img/sect_eight_arrow.png'
-import SectEightSliderValues from './sect_eight/slider_values'
+import Daniel from '../../static/img/Daniel Wong.jpg'
+import James from '../../static/img/James Carter.jpg'
+import Olivia from '../../static/img/Olivia Martinez.jpg'
 
 import Footer from '../Components/Footer/footer'
 import BigSlider from '../Components/BigSlider/slider'
 import Faq from '../Components/FaqSection/faq'
 import Slider from '../Components/LastSlider/slider'
 
+import Food1 from '../../static/img/Food 1.jpg'
+import Food2 from '../../static/img/Food 2.jpg'
+import miche from '../../static/img/Michelen Star Winner Red Food.png'
 
 export default function HomePage(){
-    const [sectFiveCardTitle, setSectFiveCardTitle] = useState('Elegant Anniversary Dinner')
-    const [sectFiveCardDesc, setSectFiveCardDesc] = useState('A beautifully curated private dining experience celebrating a couple’s milestone anniversary. The evening featured a gourmet five-course meal, candlelit ambiance, and live acoustic music.')
-
-    const [sectSevenFaqActive, setSectSevenFaqActive] = useState(1)
-
-    const [sectFiveImageOne, setSectFiveImageOne] = useState(0)
-    const [sectFiveImageTwo, setSectFiveImageTwo] = useState(1)
-    const [sectFiveImageThree, setSectFiveImageThree] = useState(2)
-    const [sectFiveImageFour, setSectFiveImageFour] = useState(3)
-    const [sectFiveImageFive, setSectFiveImageFive] = useState(4)
-
-    const [sectEightImageOne, setSectEightImageOne] = useState(0)
-    const [sectEightImageTwo, setSectEightImageTwo] = useState(1)
-    const [sectEightImageThree, setSectEightImageThree] = useState(2)
-
-    function SectFiveSliderNext(){
-        if(sectFiveImageOne == 4){
-            setSectFiveImageOne(0)
-        }
-        else{
-            setSectFiveImageOne(sectFiveImageOne + 1)
-        }
-
-        if(sectFiveImageTwo == 4){
-            setSectFiveImageTwo(0)
-        }
-        else{
-            setSectFiveImageTwo(sectFiveImageTwo + 1)
-        }
-
-        if(sectFiveImageThree == 4){
-            setSectFiveImageThree(0)
-        }
-        else{
-            setSectFiveImageThree(sectFiveImageThree + 1)
-        }
-
-        if(sectFiveImageFour == 4){
-            setSectFiveImageFour(0)
-        }
-        else{
-            setSectFiveImageFour(sectFiveImageFour + 1)
-        }
-
-        if(sectFiveImageFive == 4){
-            setSectFiveImageFive(0)
-        }
-        else{
-            setSectFiveImageFive(sectFiveImageFive + 1)
-        }
-    }
-
-    function SectFiveSliderPrev(){
-        if(sectFiveImageOne == 0){
-            setSectFiveImageOne(4)
-        }
-        else{
-            setSectFiveImageOne(sectFiveImageOne - 1)
-        }
-
-        if(sectFiveImageTwo == 0){
-            setSectFiveImageTwo(4)
-        }
-        else{
-            setSectFiveImageTwo(sectFiveImageTwo - 1)
-        }
-
-        if(sectFiveImageThree == 0){
-            setSectFiveImageThree(4)
-        }
-        else{
-            setSectFiveImageThree(sectFiveImageThree - 1)
-        }
-
-        if(sectFiveImageFour == 0){
-            setSectFiveImageFour(4)
-        }
-        else{
-            setSectFiveImageFour(sectFiveImageFour - 1)
-        }
-
-        if(sectFiveImageFive == 0){
-            setSectFiveImageFive(4)
-        }
-        else{
-            setSectFiveImageFive(sectFiveImageFive - 1)
-        }
-    }
-
-    function SectEightSliderNext(){
-        if(sectEightImageOne == 2){
-            setSectEightImageOne(0)
-        }
-        else{
-            setSectEightImageOne(sectEightImageOne + 1)
-        }
-
-        if(sectEightImageTwo == 2){
-            setSectEightImageTwo(0)
-        }
-        else{
-            setSectEightImageTwo(sectEightImageTwo + 1)
-        }
-
-        if(sectEightImageThree == 2){
-            setSectEightImageThree(0)
-        }
-        else{
-            setSectEightImageThree(sectEightImageThree + 1)
-        }
-    }
-
-    function SectEightSliderPrev(){
-        if(sectEightImageOne == 0){
-            setSectEightImageOne(2)
-        }
-        else{
-            setSectEightImageOne(sectEightImageOne - 1)
-        }
-
-        if(sectEightImageTwo == 0){
-            setSectEightImageTwo(2)
-        }
-        else{
-            setSectEightImageTwo(sectEightImageTwo - 1)
-        }
-
-        if(sectEightImageThree == 0){
-            setSectEightImageThree(2)
-        }
-        else{
-            setSectEightImageThree(sectEightImageThree - 1)
-        }
-    }
-
     return(
         <>
             <header className={classes.header}>
@@ -216,8 +91,8 @@ export default function HomePage(){
                                 </div>
                             </div>
                             <div className={classes.images}>
-                                <img src="" alt="" />
-                                <img src="" alt="" />
+                                <img src={Food1} alt="" />
+                                <img src={Food2} alt="" />
                                 <div className={classes.review}>
                                     <div className={classes.rating}>
                                         <div className={classes.stars}>
@@ -268,7 +143,7 @@ export default function HomePage(){
                         </div>
                         <div className={classes.middle}>
                             <div className={classes.image}>
-                                <img src="" alt="" />
+                                <img src={place} alt="" style={{backgroundImage: 'url("' + taco + '")'}}/>
                             </div>
                             <div className={classes.dishes}>
                                 <div className={classes.top}>
@@ -339,7 +214,7 @@ export default function HomePage(){
                                 <SwiperSlide>
                                     <div className={classes.swiper_slide}>
                                         <div className={classes.image}>
-                                            <img src="" alt="" />
+                                            <img src={place} alt="" style={{backgroundImage: 'url("' + wagu + '")'}}/>
                                         </div>
                                         <div className={classes.info}>
                                             <div className={classes.title_and_desc}>
@@ -366,24 +241,26 @@ export default function HomePage(){
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div className={classes.swiper_slide}>
+                                <div className={classes.swiper_slide}>
                                         <div className={classes.image}>
-                                            <img src="" alt="" />
+                                        <img src={place} alt="" style={{backgroundImage: 'url("' + rizz + '")'}}/>
                                         </div>
                                         <div className={classes.info}>
-                                            <div className={classes.title}>
-                                                <p></p>
-                                            </div>
-                                            <div className={classes.desc}>
-                                                <p></p>
+                                            <div className={classes.title_and_desc}>
+                                                <div className={classes.title}>
+                                                    <p>Ocean Symphony Risotto</p>
+                                                </div>
+                                                <div className={classes.desc}>
+                                                    <p>Creamy saffron-infused risotto with fresh lobster, scallops, and prawns, finished with parmesan and herbs</p>
+                                                </div>
                                             </div>
                                             <div className={classes.rating_and_price}>
                                                 <div className={classes.rating}>
-                                                    <img src="" alt="" />
-                                                    <img src="" alt="" />
-                                                    <img src="" alt="" />
-                                                    <img src="" alt="" />
-                                                    <img src="" alt="" />
+                                                    <img src={star} alt="" />
+                                                    <img src={star} alt="" />
+                                                    <img src={star} alt="" />
+                                                    <img src={star} alt="" />
+                                                    <img src={star} alt="" />
                                                 </div>
                                                 <div className={classes.price}>
                                                     <p>$12,00</p>
@@ -393,63 +270,67 @@ export default function HomePage(){
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div className={classes.swiper_slide}>
+                                <div className={classes.swiper_slide}>
                                         <div className={classes.image}>
-                                            <img src="" alt="" />
+                                        <img src={place} alt="" style={{backgroundImage: 'url("' + dick + '")'}}/>
                                         </div>
                                         <div className={classes.info}>
-                                            <div className={classes.title}>
-                                                <p></p>
-                                            </div>
-                                            <div className={classes.desc}>
-                                                <p></p>
+                                            <div className={classes.title_and_desc}>
+                                                <div className={classes.title}>
+                                                    <p>Golden Crispy Duck Confit</p>
+                                                </div>
+                                                <div className={classes.desc}>
+                                                    <p>Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.</p>
+                                                </div>
                                             </div>
                                             <div className={classes.rating_and_price}>
                                                 <div className={classes.rating}>
-                                                    <img src="" alt="" />
-                                                    <img src="" alt="" />
-                                                    <img src="" alt="" />
-                                                    <img src="" alt="" />
-                                                    <img src="" alt="" />
+                                                    <img src={star} alt="" />
+                                                    <img src={star} alt="" />
+                                                    <img src={star} alt="" />
+                                                    <img src={star} alt="" />
+                                                    <img src={star} alt="" />
                                                 </div>
                                                 <div className={classes.price}>
-                                                    <p></p>
+                                                    <p>$12,00</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div className={classes.swiper_slide}>
+                                <div className={classes.swiper_slide}>
                                         <div className={classes.image}>
-                                            <img src="" alt="" />
+                                        <img src={place} alt="" style={{backgroundImage: 'url("' + kake + '")'}}/>
                                         </div>
                                         <div className={classes.info}>
-                                            <div className={classes.title}>
-                                                <p></p>
-                                            </div>
-                                            <div className={classes.desc}>
-                                                <p></p>
+                                            <div className={classes.title_and_desc}>
+                                                <div className={classes.title}>
+                                                    <p>Velvet Chocolate Lava Cake</p>
+                                                </div>
+                                                <div className={classes.desc}>
+                                                    <p>Succulent Wagyu steak drizzled with aromatic truffle sauce, served with buttery mashed potatoes.</p>
+                                                </div>
                                             </div>
                                             <div className={classes.rating_and_price}>
                                                 <div className={classes.rating}>
-                                                    <img src="" alt="" />
-                                                    <img src="" alt="" />
-                                                    <img src="" alt="" />
-                                                    <img src="" alt="" />
-                                                    <img src="" alt="" />
+                                                    <img src={star} alt="" />
+                                                    <img src={star} alt="" />
+                                                    <img src={star} alt="" />
+                                                    <img src={star} alt="" />
+                                                    <img src={star} alt="" />
                                                 </div>
                                                 <div className={classes.price}>
-                                                    <p></p>
+                                                    <p>$12,00</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <div className={classes.swiper_slide}>
+                                <div className={classes.swiper_slide}>
                                         <div className={classes.image}>
-                                            <img src="" alt="" />
+                                        <img src={place} alt="" style={{backgroundImage: 'url("' + wagu + '")'}}/>
                                         </div>
                                         <div className={classes.info}>
                                             <div className={classes.title_and_desc}>
@@ -580,7 +461,7 @@ export default function HomePage(){
                             <SwiperSlide>
                                 <div className={classes.swiper_slide}>
                                     <div className={classes.image}>
-                                        <img src="" alt="" />
+                                        <img src={place} alt="" style={{backgroundImage: 'url("' + Olivia + '")'}}/>
                                     </div>
                                     <div className={classes.info}>
                                         <p>Olivia Martinez</p>
@@ -591,7 +472,7 @@ export default function HomePage(){
                             <SwiperSlide>
                                 <div className={classes.swiper_slide}>
                                     <div className={classes.image}>
-                                        <img src="" alt="" />
+                                    <img src={place} alt="" style={{backgroundImage: 'url("' + James + '")'}}/>
                                     </div>
                                     <div className={classes.info}>
                                         <p>James Carter</p>
@@ -602,7 +483,7 @@ export default function HomePage(){
                             <SwiperSlide>
                                 <div className={classes.swiper_slide}>
                                     <div className={classes.image}>
-                                        <img src="" alt="" />
+                                    <img src={place} alt="" style={{backgroundImage: 'url("' + Daniel + '")'}}/>
                                     </div>
                                     <div className={classes.info}>
                                         <p>Daniel Wong</p>
@@ -613,7 +494,7 @@ export default function HomePage(){
                             <SwiperSlide>
                                 <div className={classes.swiper_slide}>
                                     <div className={classes.image}>
-                                        <img src="" alt="" />
+                                    <img src={place} alt="" style={{backgroundImage: 'url("' + Olivia + '")'}}/>
                                     </div>
                                     <div className={classes.info}>
                                         <p>Olivia Martinez</p>
@@ -624,7 +505,7 @@ export default function HomePage(){
                             <SwiperSlide>
                                 <div className={classes.swiper_slide}>
                                     <div className={classes.image}>
-                                        <img src="" alt="" />
+                                    <img src={place} alt="" style={{backgroundImage: 'url("' + James + '")'}}/>
                                     </div>
                                     <div className={classes.info}>
                                         <p>James Carter</p>
@@ -635,7 +516,7 @@ export default function HomePage(){
                             <SwiperSlide>
                                 <div className={classes.swiper_slide}>
                                     <div className={classes.image}>
-                                        <img src="" alt="" />
+                                    <img src={place} alt="" style={{backgroundImage: 'url("' + Daniel + '")'}}/>
                                     </div>
                                     <div className={classes.info}>
                                         <p>Daniel Wong</p>
@@ -670,7 +551,7 @@ export default function HomePage(){
                         <div className={classes.bot}>
                             <div className={classes.left}>
                                 <div className={classes.image}>
-                                    <img src="" alt="" />
+                                    <img src={rise} alt="" />
                                 </div>
                                 <div className={classes.info}>
                                     <div className={classes.tags}>
@@ -691,24 +572,28 @@ export default function HomePage(){
                             </div>
                             <div className={classes.right}>
                                 <SectSixTrend
+                                    image={rise}
                                     title={'In recent years, there has been a significant shift towards plant-based dining.'}
                                     desc={'In recent years, there has been a significant shift towards plant-based dining, driven by health-conscious consumers and growing awareness of environmental sustainability.'}
                                     trend={'Food Trends'}
                                     time={'6 Min Read'}
                                 />
                                 <SectSixTrend
+                                    image={rise}
                                     title={'In recent years, there has been a significant shift towards plant-based dining.'}
                                     desc={'In recent years, there has been a significant shift towards plant-based dining, driven by health-conscious consumers and growing awareness of environmental sustainability.'}
                                     trend={'Food Trends'}
                                     time={'6 Min Read'}
                                 />
                                 <SectSixTrend
+                                    image={rise}
                                     title={'In recent years, there has been a significant shift towards plant-based dining.'}
                                     desc={'In recent years, there has been a significant shift towards plant-based dining, driven by health-conscious consumers and growing awareness of environmental sustainability.'}
                                     trend={'Food Trends'}
                                     time={'6 Min Read'}
                                 />
                                 <SectSixTrend
+                                    image={rise}
                                     title={'In recent years, there has been a significant shift towards plant-based dining.'}
                                     desc={'In recent years, there has been a significant shift towards plant-based dining, driven by health-conscious consumers and growing awareness of environmental sustainability.'}
                                     trend={'Food Trends'}

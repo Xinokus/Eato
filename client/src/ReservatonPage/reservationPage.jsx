@@ -5,10 +5,52 @@ import Slider from '../Components/LastSlider/slider'
 import classes from './reservationPage.module.scss'
 
 import arrow from './img/arrow.png'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 
 export default function ReservationPage(){
     const [calendarDay, setCalendarDay] = useState(1)
+
+    const [fullName, setFullName] = useState()
+    const [email, setEmail] = useState()
+    const [guests, setGuests] = useState()
+    const [time, setTime] = useState('8:00')
+    const [date, setDate] = useState('1 February 2025')
+    const [special, setSpecial] = useState(null)
+    const [notes, setNotes] = useState(null)
+
+    let day
+    useEffect(()=>{
+        day = document.getElementById("day").value
+        setDate(day)
+    })
+    
+
+    function createReservation(){
+        let body = new FormData()
+        body.append('fullName', fullName)
+        body.append('email', email)
+        body.append('guests', guests)
+        body.append('time', time)
+        body.append('date', date)
+        body.append('special', special)
+        body.append('note', notes)
+
+        axios({
+            method: "post",
+            url: "http://localhost:5000/reservations/create",
+            data: body,
+            headers: { "Content-Type": "multipart/form-data" },
+        })
+        .then(function (response) {
+            console.log(response);
+            alert('Nicely done!')
+        })
+        .catch(function (response) {
+            console.log(response);
+            alert('error')
+        });
+    }
 
     return(
         <>
@@ -21,37 +63,40 @@ export default function ReservationPage(){
                             Culinary Delights</p>
                             <p>Make a reservation today to experience exquisite dishes, attentive service, and a welcoming atmosphere perfect for any occasion.</p>
                         </div>
-                        <form onSubmit={(e)=>e.preventDefault()} className={classes.bot}>
+                        <form onSubmit={(e)=>[e.preventDefault(), createReservation()]} className={classes.bot}>
                             <div className={classes.inputs}>
                                 <div className={classes.one}>
                                     <div className={classes.input}>
                                         <label htmlFor="name">Full Name</label>
-                                        <input type="text" name="name" id="name" placeholder='Enter Your Full Name' required/>
+                                        <input type="text" name="name" id="name" placeholder='Enter Your Full Name' required
+                                        value={fullName} onChange={(e)=>setFullName(e.target.value)}/>
                                     </div>
                                     <div className={classes.input}>
                                         <label htmlFor="email">Email Address</label>
-                                        <input type="email" name="email" id="email" placeholder='Enter Your Email Address' required/>
+                                        <input type="email" name="email" id="email" placeholder='Enter Your Email Address' required
+                                        value={email} onChange={(e)=>setEmail(e.target.value)}/>
                                     </div>
                                 </div>
                                 <div className={classes.two}>
                                     <div className={classes.input}>
                                         <label htmlFor="guests">Number of Guests</label>
-                                        <input type="text" name="guests" id="guests" placeholder='Enter a Number of Guests' required/>
+                                        <input type="text" name="guests" id="guests" placeholder='Enter a Number of Guests' required
+                                        value={guests} onChange={(e)=>setGuests(e.target.value)}/>
                                     </div>
                                     <div className={classes.input}>
                                         <label htmlFor="time">Time of Reservation</label>
                                         <select name="time" id="time">
-                                            <option value="">8:00 AM</option>
-                                            <option value="">9:00 AM</option>
-                                            <option value="">10:00 AM</option>
-                                            <option value="">11:00 AM</option>
-                                            <option value="">12:00 PM</option>
+                                            <option value="" onClick={()=>setTime('8:00')}>8:00 AM</option>
+                                            <option value="" onClick={()=>setTime('9:00')}>9:00 AM</option>
+                                            <option value="" onClick={()=>setTime('10:00')}>10:00 AM</option>
+                                            <option value="" onClick={()=>setTime('11:00')}>11:00 AM</option>
+                                            <option value="" onClick={()=>setTime('12:00')}>12:00 PM</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div className={classes.three}>
                                     <div className={classes.left}>
-                                        <div className={classes.input}>
+                                        <div className={classes.input} >
                                             <label htmlFor="day">Preferred date/time</label>
                                             <input type="text" name="day" id="day" readOnly value={calendarDay + ' February ' + 2025}/>
                                         </div>
@@ -125,13 +170,13 @@ export default function ReservationPage(){
                                         <div className={classes.input}>
                                             <label htmlFor="requsts">Special Requests (Optional)</label>
                                             <select name="requsts" id="requsts">
-                                                <option value="">None</option>
-                                                <option value="">Dietary Restrictions</option>
+                                                <option value="" onClick={()=>setSpecial(null)}>None</option>
+                                                <option value="" onClick={()=>setSpecial('Dietary Restrictions')}>Dietary Restrictions</option>
                                             </select>
                                         </div>
                                         <div className={classes.textarea}>
                                             <label htmlFor="notes">Additional Notes</label>
-                                            <textarea name="notes" id="notes"></textarea>
+                                            <textarea name="notes" id="notes" value={notes} onChange={(e)=>setNotes(e.target.value)}></textarea>
                                         </div>
                                         <div className={classes.check}>
                                             <input type="checkbox" name="" id="" required/>

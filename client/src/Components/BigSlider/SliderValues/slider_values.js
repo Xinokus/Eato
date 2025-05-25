@@ -6,7 +6,7 @@ const SliderValues = [
         index: 1,
         position: '-580px',
         y: '20px',
-        title: '1',
+        title: 'Elegant Anniversary Dinner',
         desc: 'A beautifully curated private dining experience celebrating a couple’s milestone anniversary. The evening featured a gourmet five-course meal, candlelit ambiance, and live acoustic music.'
     },
     {
@@ -16,7 +16,7 @@ const SliderValues = [
         index: 2,
         position: '-320px',
         y: '20px',
-        title: '2',
+        title: 'Elegant Dinner',
         desc: 'A beautifully curated private dining experience celebrating a couple’s milestone anniversary. The evening featured a gourmet five-course meal, candlelit ambiance, and live acoustic music.'
     },
     {
@@ -26,7 +26,7 @@ const SliderValues = [
         index: 3,
         position: '0px',
         y: '0',
-        title: '3',
+        title: 'Elegant Anniversary',
         desc: 'A beautifully curated private dining experience celebrating a couple’s milestone anniversary. The evening featured a gourmet five-course meal, candlelit ambiance, and live acoustic music.'
     },
     {
@@ -36,7 +36,7 @@ const SliderValues = [
         index: 2,
         position: '380px',
         y: '20px',
-        title: '4',
+        title: 'Anniversary Dinner',
         desc: 'A beautifully curated private dining experience celebrating a couple’s milestone anniversary. The evening featured a gourmet five-course meal, candlelit ambiance, and live acoustic music.'
     },
     {
@@ -46,7 +46,7 @@ const SliderValues = [
         index: 1,
         position: '680px',
         y: '20px',
-        title: '5',
+        title: 'Elegant Dinner Anniversary',
         desc: 'A beautifully curated private dining experience celebrating a couple’s milestone anniversary. The evening featured a gourmet five-course meal, candlelit ambiance, and live acoustic music.'
     }
 ]

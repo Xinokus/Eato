@@ -59,6 +59,9 @@
                     height: 430px;
                     background-color: gainsboro;
                     margin-bottom: 24px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
                 }
                 .info{
                     width: 302px;
@@ -234,13 +237,14 @@
                     .image, .image img{
                         width: 302px;
                         height: 430px;
-                        background-color: gainsboro;
                         margin-bottom: 24px;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
                     }
                     .info{
                         width: 302px;
                         height: 72px;
-                        background-color: #070707;
                         border-radius: 12px;
                         transition: 0.5s all ease;
                         box-sizing: border-box;
@@ -452,7 +456,11 @@
                                 padding: 14px;
                             }
                             .rating_and_price{
+                                width: 210px;
                                 height: 32px;
+                                .rating{
+                                    width: 130px;
+                                }
                             }
                         }
                     }

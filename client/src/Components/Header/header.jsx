@@ -8,6 +8,9 @@ import circle from './img/circle.png'
 import red_highlight from './img/red_highlight.png'
 import yellow_highlight from './img/yellow_highlight.png'
 
+import place from '../../../static/img/place.png'
+import image from '../../../static/img/Michelen Star Winner Red Food.png'
+
 export default function Header({title_top, title_bot, color}){
     return(
         <>
@@ -18,7 +21,7 @@ export default function Header({title_top, title_bot, color}){
                     <p style={color == 'yellow' ? {color: '#C31E26'} : {color: '#FFC62B'}}>{title_bot}</p>
                 </div>
                 <div className={classes.image}>
-                    <img src="" alt="" />
+                    <img src={image} alt="" />
                 </div>
 
 

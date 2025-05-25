@@ -1,12 +1,14 @@
 import star from '../img/star.png'
 import classes from '../menuPage.module.scss'
 
-export default function Dish({title, desc, rating, price}){
+import place from '../../../static/img/place.png'
+
+export default function Dish({img, title, desc, rating, price}){
     return(
         <>
             <div className={classes.swiper_slide}>
                 <div className={classes.image}>
-                    <img src="" alt="" />
+                    <img src={place} alt="" style={{backgroundImage: 'url("' + img + '")'}}/>
                 </div>
                 <div className={classes.info}>
                     <div className={classes.title_and_desc}>
